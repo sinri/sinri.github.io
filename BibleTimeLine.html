@@ -1,0 +1,149 @@
+<html>
+	<head>
+		<title>Time Line of Bible</title>
+		<style type="text/css">
+		table.gridtable {
+			font-family: verdana,arial,sans-serif;
+			font-size:11px;
+			color:#333333;
+			border-width: 1px;
+			border-color: #666666;
+			border-collapse: collapse;
+		}
+		table.gridtable th {
+			border-width: 1px;
+			padding: 8px;
+			border-style: solid;
+			border-color: #666666;
+			background-color: #dedede;
+		}
+		table.gridtable td {
+			border-width: 1px;
+			padding: 8px;
+			border-style: solid;
+			border-color: #666666;
+			background-color: #ffffff;
+		}
+		</style>
+		<script type="text/javascript">
+		var line={
+			0:"亚当 出现",
+			130:"亚当 生 塞特",
+			930:"亚当 死",
+			235:"塞特 生 以挪士",
+			1042:"塞特 死",
+			325:"以挪士 生 该南",
+			1140:"以挪士 死",
+			395:"该南 生 玛勒列",
+			1235:"该南 死",
+			460:"玛勒列 生 雅列",
+			1290:"玛勒列 死",
+			622:"雅列 生 以诺",
+			1422:"雅列 死",
+			687:"以诺 生 玛土撒拉",
+			987:"以诺 被取去",
+			874:"玛土撒拉 生 拉麦",
+			1656:"玛土撒拉 死\
+				<br>\
+				洪水\
+				<br>\
+				当挪亚六百岁、二月十七日那一天、大渊的泉源、都裂开了、天上的窗户、也敞开了\
+				<br>\
+				四十昼夜降大雨在地上\
+				<br>\
+				水势浩大、在地上共一百五十天...水从地上渐退．过了一百五十天、水就渐消\
+				<br>\
+				七月十七日、方舟停在亚拉腊山上\
+				<br>\
+				水又渐消、到十月初一日、山顶都现出来了\
+				<br>\
+				十一月初十日左右：过了四十天、挪亚开了方舟的窗户...放出一只乌鸦去,他又放出一只鸽子去\
+				<br>\
+				十一月十七日左右：他又等了七天、再把鸽子从方舟放出去\
+				<br>\
+				十一月二十四日左右：他又等了七天、放出鸽子去、鸽子就不再回来了\
+				<br>\
+				闪 生 亚法撒",
+			1657:"到挪亚六百零一岁、正月初一日、地上的水都干了\
+				<br>\
+				到了二月二十七日、地就都干了",
+			1056:"拉麦 生 挪亚",
+			1651:"拉麦 死",
+			1556:"挪亚 生 闪 含 雅弗",
+			2006:"挪亚 死",
+			2156:"闪 死",
+			1691:"亚法撒 生 沙拉",
+			2094:"亚法撒 死",
+			1721:"沙拉 生 希伯",
+			2124:"沙拉 死",
+			1755:"希伯 生 法勒",
+			2185:"希伯 死",
+			1785:"法勒 生 拉吴",
+			1994:"法勒 死",
+			1817:"拉吴 生 西鹿",
+			2024:"拉吴 死",
+			1847:"西鹿 生 拿鹤",
+			2047:"西鹿 死",
+			1876:"拿鹤 生 他拉",
+			1995:"拿鹤 死",
+			1946:"他拉 生 亚伯兰",
+			2081:"他拉 死",
+			2021:"亚伯兰 出哈兰",
+			2032:"亚伯兰 生 以实玛利",
+			1955:"撒拉 出生",
+			2045:"亚伯兰 更名 亚伯拉罕 受以撒出生之预言",
+			2046:"亚伯拉罕 生 以撒",
+			2082:"撒拉 死",
+			2086:"以撒 婚",
+			2121:"亚伯拉罕 死",
+			2106:"以撒 生 以扫 雅各",
+			2146:"以扫 婚",
+			2226:"以撒 死",
+			2236:"雅各 迁入埃及 见法老",
+			2253:"雅各 死",
+			2197:"雅各 生 约瑟",
+			2214:"约瑟 开始放羊",
+			2227:"约瑟 为埃及相",
+			2307:"约瑟 死",
+			2583:"暗兰 生 亚伦",
+			2586:"暗兰 生 摩西",
+			2666:"摩西 向法老提出出国要求\
+				<br>\
+				正月 以色列家出埃及\
+				<br>\
+				第二个月十五日、到了以琳和西乃中间、汛的旷野,造反被喂鹌鹑,吗哪始\
+				<br>\
+				满了三个月的那一天、就来到西乃的旷野",
+			2667:"第二年正月初一日、帐幕就立起来",
+			2706:"吗哪止"
+		};
+		</script>
+	</head>
+	<body>
+		<h1>Time Line of Bible</h1>
+		<h2>Since the creation of Adam</h2>
+		<hr>
+		<table class="gridtable">
+			<tr>
+				<th>Year</th>
+				<th>Event</th>
+			</tr>
+			<script type="text/javascript">
+				for (var item in line){
+					document.write("<tr><td>"+
+						item+
+						"</td><td>"+
+						line[item]+
+						"</td></tr>");
+				};
+			</script>
+		</table>
+		<script type="text/javascript">
+		document.write("<textarea>");
+			for (var item in line){
+				document.write(item+":\""+line[item]+"\",\n");
+			};
+			document.write("</textarea>");
+		</script>
+	</body>
+</html>
