@@ -11,6 +11,7 @@ Function.prototype.method=function(name,func){
 	var sqls=new Array();
 	sqls[0]="SELECT rf.FACILITY_ID,rf.FACILITY_NAME FROM ecshop.ecs_admin_user eau LEFT JOIN romeo.facility rf on POSITION(rf.FACILITY_ID IN eau.facility_id) WHERE eau.user_name = 'dareke'; ";
 	sqls[1]="SELECT * FROM romeo.inventory_location WHERE product_id = 'PID';";
+	sqls[2]="SELECT * FROM ecshop.ecs_order_info WHERE order_id=OID;"
 
 	function showsql(sql_id){
 		var sql=sqls[sql_id];
@@ -29,6 +30,7 @@ Function.prototype.method=function(name,func){
 	<ol>
 		<li>Admin in which facilities <input type='button' value='DO' onclick='showsql(0)'></li>
 		<li>Inventory Location Check for product <input type='button' value='DO' onclick='showsql(1)'></li>
+		<li>Order by ID <input type='button' value='DO' onclick='showsql(2)'></li>
 	</ol>
 	</div>
 </body>
