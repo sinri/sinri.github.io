@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script language='text/javascript'>
+Function.prototype.method=function(name,func){
+	this.prototype[name]=func;
+	return this;
+};
+</script>
+<script type="text/javascript">
+	var sqls=new Array();
+	sqls[0]="SELECT rf.FACILITY_ID,rf.FACILITY_NAME FROM ecshop.ecs_admin_user eau LEFT JOIN romeo.facility rf on POSITION(rf.FACILITY_ID IN eau.facility_id) WHERE eau.user_name = 'dareke'; ";
+	sqls[1]="SELECT * FROM romeo.inventory_location WHERE product_id = 'PID';";
+
+	function showsql(sql_id){
+		var sql=sqls[sql_id];
+		document.getElementById('ta').value=sql;
+	}
+</script>
+</head>
+<body>
+	<h1>All Hail Sinri Edogawa</h1>
+	<h2>Raku Zono Fast Food</h2>
+	<hr>
+	<div>
+		<textarea cols='150' rows='8' id='ta'>Select one to copy from here!</textarea>
+	</div>
+	<div>
+	<ol>
+		<li>Admin in which facilities <input type='button' value='DO' onclick='showsql(0)'></li>
+		<li>Inventory Location Check for product <input type='button' value='DO' onclick='showsql(1)'></li>
+	</ol>
+	</div>
+</body>
+</html>
