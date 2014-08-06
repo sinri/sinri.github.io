@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>assets</key>
+			<array>
+				<dict>
+					<key>kind</key>
+					<string>software-package</string>
+					<key>url</key>
+					<string>https://erpbrand.leqee.com/admin/babynespos/BabyNes.ipa</string>
+				</dict>
+			</array>
+			<key>metadata</key>
+			<dict>
+				<key>bundle-identifier</key>
+				<string>com.leqee.babynespos</string>
+				<key>bundle-version</key>
+				<string>1.0.43</string>
+				<key>kind</key>
+				<string>software</string>
+				<key>subtitle</key>
+				<string>20140806 Preview 1408</string>
+				<key>title</key>
+				<string>BabyNes POS</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
