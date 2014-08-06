@@ -27,7 +27,9 @@ if($_REQUEST['action']=='aps'){
 	*/
 	$message_alert_type=$_REQUEST['alert'];
 	$message_addition=$_REQUEST['addition'];
-	$result=ApplePushSenderToDevices($posted_deviceTokenArray,$message_alert_type,$message_addition);
+	$message_act=$_REQUEST['act'];
+	$isSandboxPush=false;
+	$result=ApplePushSenderToDevices($isSandboxPush,$posted_deviceTokenArray,$message_alert_type,$message_addition,$message_act);
 }
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -74,7 +76,7 @@ if($_REQUEST['action']=='aps'){
 		<br>
 		<div>
 			<form method="POST">
-				<div style="display:block;">
+				<div style="display:none;">
 					<textarea name="deviceTokens" id="deviceTokensTA"><?php
 						//echo implode(",",$deviceTokenArray);
 					?></textarea>
@@ -87,6 +89,11 @@ if($_REQUEST['action']=='aps'){
 				<fieldset>
 					<legend>ADDITION</legend>
 					<textarea name="addition" style="width:100%; height:50px;"></textarea>
+				</fieldset>
+				<br>
+				<fieldset>
+					<legend>ACT</legend>
+					<input name="act" style="width:100%;">
 				</fieldset>
 				<br>
 				<p style="text-align:right;">

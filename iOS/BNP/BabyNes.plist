@@ -19,11 +19,11 @@
 				<key>bundle-identifier</key>
 				<string>com.leqee.babynespos</string>
 				<key>bundle-version</key>
-				<string>1.0.39</string>
+				<string>1.0.40</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>subtitle</key>
-				<string>20140805</string>
+				<string>20140806 Preview ASA</string>
 				<key>title</key>
 				<string>BabyNes POS</string>
 			</dict>

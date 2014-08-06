@@ -4,12 +4,18 @@ $passphrase = 'leqeeleqee';
 // Put the PEM file (contains cert & key) here:
 $CKPemFile = 'BabyNesPosProductDuoCK.pem';
 
+$APPLE_PUSH_GATEWAY_Sandbox='ssl://gateway.sandbox.push.apple.com:2195';
+$APPLE_PUSH_GATEWAY_Production='ssl://gateway.push.apple.com:2195';
+
 ////////////////////////////////////////////////////////////////////////////////
 
-function ApplePushSenderToOneDevice($theDeviceToken,$theAlert,$theAddition){
+function ApplePushSenderToOneDevice($isSandBox,$theDeviceToken,$theAlert,$theAddition,$act){
 
 	global $passphrase;
 	global $CKPemFile;
+
+	global $APPLE_PUSH_GATEWAY_Sandbox;
+	global $APPLE_PUSH_GATEWAY_Production;
 
 	$history=array();
 
@@ -22,9 +28,16 @@ function ApplePushSenderToOneDevice($theDeviceToken,$theAlert,$theAddition){
 	stream_context_set_option($ctx, 'ssl', 'local_cert', $CKPemFile);
 	stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
+	if($isSandBox){
+		$gateway=$APPLE_PUSH_GATEWAY_Sandbox;
+	}else{
+		$gateway=$APPLE_PUSH_GATEWAY_Production;
+	}
+
 	// Open a connection to the APNS server
 	$fp = stream_socket_client(
-		'ssl://gateway.sandbox.push.apple.com:2195', $err,
+		$gateway,
+		$err,
 		$errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
 
 	if (!$fp)
@@ -35,6 +48,7 @@ function ApplePushSenderToOneDevice($theDeviceToken,$theAlert,$theAddition){
 
 	// Create the payload body
 	$body['aps'] = array(
+		'act' => $act,
 		'alert' => $theAlert,
 		'sound' => 'default',
 		'addition' => $theAddition
@@ -66,10 +80,13 @@ function ApplePushSenderToOneDevice($theDeviceToken,$theAlert,$theAddition){
 	return $history;
 }
 
-function ApplePushSenderToDevices($theDeviceTokenArray,$theAlert,$theAddition){
+function ApplePushSenderToDevices($isSandBox,$theDeviceTokenArray,$theAlert,$theAddition,$act){
 
 	global $passphrase;
 	global $CKPemFile;
+
+	global $APPLE_PUSH_GATEWAY_Sandbox;
+	global $APPLE_PUSH_GATEWAY_Production;
 
 	$history=array();
 
@@ -77,9 +94,16 @@ function ApplePushSenderToDevices($theDeviceTokenArray,$theAlert,$theAddition){
 	stream_context_set_option($ctx, 'ssl', 'local_cert', $CKPemFile);
 	stream_context_set_option($ctx, 'ssl', 'passphrase', $passphrase);
 
+	if($isSandBox){
+		$gateway=$APPLE_PUSH_GATEWAY_Sandbox;
+	}else{
+		$gateway=$APPLE_PUSH_GATEWAY_Production;
+	}
+
 	// Open a connection to the APNS server
 	$fp = stream_socket_client(
-		'ssl://gateway.sandbox.push.apple.com:2195', $err,
+		$gateway,
+		$err,
 		$errstr, 60, STREAM_CLIENT_CONNECT|STREAM_CLIENT_PERSISTENT, $ctx);
 
 	if (!$fp){
@@ -93,6 +117,7 @@ function ApplePushSenderToDevices($theDeviceTokenArray,$theAlert,$theAddition){
 
 	// Create the payload body
 	$body['aps'] = array(
+		'act' => $act,
 		'alert' => $theAlert,
 		'sound' => 'default',
 		'addition' => $theAddition
