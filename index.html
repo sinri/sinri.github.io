@@ -14,6 +14,11 @@
 			color:black;
 			border-bottom:1px solid black;
 		}
+
+		a.project_title:link {color:#0000FF;text-decoration:none;}		/* 未被访问的链接 */
+		a.project_title:visited {color:#0000FF;text-decoration:none;}	/* 已被访问的链接 */
+		a.project_title:hover {color:#FF00FF;text-decoration:underline;}	/* 鼠标指针移动到链接上 */
+		a.project_title:active {color:#0000FF;text-decoration:underline;}	/* 正在被点击的链接 */
 	</style>
 	<script language='text/javascript'>
 		Function.prototype.method=function(name,func){
@@ -91,7 +96,7 @@
 				</tr>
 				<tr>
 					<td>
-						<a href="BibleTimelineProject/BibleTimeLine.html">Project Bible Time Line</a>
+						<a class="project_title" href="BibleTimelineProject/BibleTimeLine.html">Project Bible Time Line</a>
 					</td>
 					<td>
 						It is a project started up for reviewing the timeline written in the holy script. It is God's glory to hide his secret, while there would be glory for king, who sought out the hidden facts.
@@ -104,7 +109,7 @@
 				</tr>
 				<tr>
 					<td>
-						<a href="Leqee/mySQL.html">Leqee ERP Frequent</a>
+						<a class="project_title" href="Leqee/mySQL.html">Leqee ERP Frequent</a>
 					</td>
 					<td>
 						Some SQL run with high frequency, then I put them away here.
@@ -113,7 +118,7 @@
 				</tr>
 				<tr>
 					<td>
-						<a href="iOS/index.html">Sinri iOS Distribution</a>
+						<a class="project_title" href="iOS/index.html">Sinri iOS Distribution</a>
 					</td>
 					<td>
 						I distribute my iOS apps of preview version there.
