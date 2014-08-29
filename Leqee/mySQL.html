@@ -1,56 +1,1 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script language='text/javascript'>
-Function.prototype.method=function(name,func){
-	this.prototype[name]=func;
-	return this;
-};
-</script>
-<script type="text/javascript">
-	var sqls=new Array();
-	sqls[0]="SELECT rf.FACILITY_ID,rf.FACILITY_NAME FROM ecshop.ecs_admin_user eau LEFT JOIN romeo.facility rf on POSITION(rf.FACILITY_ID IN eau.facility_id) WHERE eau.user_name = 'dareke'; ";
-	sqls[1]="SELECT * FROM romeo.inventory_location WHERE product_id = 'PID';";
-	sqls[2]="SELECT * FROM ecshop.ecs_order_info WHERE order_id=OID;"
-	sqls[3]="select \n\
-        s.SHIPMENT_ID,s.CARRIER_ID,s.PARTY_ID,s.PRIMARY_ORDER_ID,count(distinct(pm.product_id)) as sku_num \n\
-    from \n\
-        romeo.order_inv_reserved r \n\
-        inner join romeo.order_shipment m on m.ORDER_ID=CONVERT(r.ORDER_ID using utf8) \n\
-        inner join romeo.shipment s on s.SHIPMENT_ID=m.SHIPMENT_ID \n\
-        inner join ecshop.ecs_order_info oi on oi.order_id = r.order_id \n\
-        inner join ecshop.ecs_order_goods og ON oi.order_id = og.order_id \n\
-        inner join romeo.product_mapping pm ON og.goods_id = pm.ecs_goods_id and og.style_id = pm.ecs_style_id \n\
-    where \n\
-        r.STATUS = 'Y' and s.STATUS = 'SHIPMENT_INPUT' and s.shipping_category = 'SHIPPING_SEND'  \n\
-        and oi.shipping_status = '0' and oi.order_status = '1' \n\
-        and not exists (select 1 from romeo.batch_pick_mapping bm where bm.shipment_id = s.shipment_id limit 1) \n\
-        and r.FACILITY_ID IN ('3580047','3633071','12768420','18906089','19568548','19568549','22143846','22143847','24196974','42741887','43981157','49858449','69897656','76065524','76161272','77451244','79256821','81569822','81569823','83077348','83077349','83077350','83972713','83972714','89054427','92718101','100170588','100170589','100170590','100170591','101960106','104054442','105983744')  and  r.PARTY_ID = '65553'group by  \n\
-        s.SHIPMENT_ID \n\
-         having sku_num >=1  \n\
-    order by sku_num  \n\
-    limit 6000";
-
-	function showsql(sql_id){
-		var sql=sqls[sql_id];
-		document.getElementById('ta').value=sql;
-	}
-</script>
-</head>
-<body>
-	<h1>All Hail Sinri Edogawa</h1>
-	<h2>Raku Zono Fast Food</h2>
-	<hr>
-	<div>
-		<textarea cols='150' rows='8' id='ta'>Select one to copy from here!</textarea>
-	</div>
-	<div>
-	<ol>
-		<li>Admin in which facilities <input type='button' value='DO' onclick='showsql(0)'></li>
-		<li>Inventory Location Check for product <input type='button' value='DO' onclick='showsql(1)'></li>
-		<li>Order by ID <input type='button' value='DO' onclick='showsql(2)'></li>
-		<li>Check Shipments for batch pick <input type='button' value='DO' onclick='showsql(3)'></li>
-	</ol>
-	</div>
-</body>
-</html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">    <head>        <meta http-equiv="content-type" content="text/html; charset=utf-8" />        <meta http-equiv="content-language" content="cs" />        <meta name="author" lang="cs" content="Tomáš Lach | HTML Kodér - www.tomaslach.cz" />        <meta name="copyright" lang="cs" content="Tomáš Lach | HTML Kodér - www.tomaslach.cz" />        <meta name="description" content="" />        <meta name="keywords" content="" />        <meta name="robots" content="all,follow" />        <link rel="shortcut icon" href="img/favicon.ico" />                <link href="../css/main_sub.css" type="text/css" rel="stylesheet" media="screen,projection" />        <title>EVERSTRAY'S</title>        <style type="text/css">        table.gridtable {        	font-family: verdana,arial,sans-serif;        	font-size:11px;        	color:#333333;        	border-width: 1px;        	border-color: #666666;        	border-collapse: collapse;        }        table.gridtable th {        	border-width: 1px;        	padding: 8px;        	border-style: solid;        	border-color: #666666;        	background-color: #dedede;        }        table.gridtable td {        	border-width: 1px;        	padding: 8px;        	border-style: solid;        	border-color: #666666;        	background-color: #ffffff;        }        </style>        <script type="text/javascript">        	var sqls=new Array();        	sqls[0]="SELECT rf.FACILITY_ID,rf.FACILITY_NAME FROM ecshop.ecs_admin_user eau LEFT JOIN romeo.facility rf on POSITION(rf.FACILITY_ID IN eau.facility_id) WHERE eau.user_name = 'dareke'; ";        	sqls[1]="SELECT * FROM romeo.inventory_location WHERE product_id = 'PID';";        	sqls[2]="SELECT * FROM ecshop.ecs_order_info WHERE order_id=OID;"        	sqls[3]="select \n\                s.SHIPMENT_ID,s.CARRIER_ID,s.PARTY_ID,s.PRIMARY_ORDER_ID,count(distinct(pm.product_id)) as sku_num \n\            from \n\                romeo.order_inv_reserved r \n\                inner join romeo.order_shipment m on m.ORDER_ID=CONVERT(r.ORDER_ID using utf8) \n\                inner join romeo.shipment s on s.SHIPMENT_ID=m.SHIPMENT_ID \n\                inner join ecshop.ecs_order_info oi on oi.order_id = r.order_id \n\                inner join ecshop.ecs_order_goods og ON oi.order_id = og.order_id \n\                inner join romeo.product_mapping pm ON og.goods_id = pm.ecs_goods_id and og.style_id = pm.ecs_style_id \n\            where \n\                r.STATUS = 'Y' and s.STATUS = 'SHIPMENT_INPUT' and s.shipping_category = 'SHIPPING_SEND'  \n\                and oi.shipping_status = '0' and oi.order_status = '1' \n\                and not exists (select 1 from romeo.batch_pick_mapping bm where bm.shipment_id = s.shipment_id limit 1) \n\                and r.FACILITY_ID IN ('3580047','3633071','12768420','18906089','19568548','19568549','22143846','22143847','24196974','42741887','43981157','49858449','69897656','76065524','76161272','77451244','79256821','81569822','81569823','83077348','83077349','83077350','83972713','83972714','89054427','92718101','100170588','100170589','100170590','100170591','101960106','104054442','105983744')  and  r.PARTY_ID = '65553'group by  \n\                s.SHIPMENT_ID \n\                 having sku_num >=1  \n\            order by sku_num  \n\            limit 6000";                	function showsql(sql_id){        		var sql=sqls[sql_id];        		document.getElementById('ta').value=sql;        	}        </script>            </head>    <body>      <div style="margin: 20px;">    	<div>    		<a href="http://www.everstray.com"  style="float: left;">    			<img src="../img/logo.png" alt="logo" style="float: left;margin-top: 10px;" />    		</a>       		<div style="margin-left: 20px;width: 80%;float: left;">    			<h1>    				Leqee Frequent SQL    			</h1>    			<h2>I will bless the LORD, who hath given me counsel: my reins also instruct me in the night seasons. (Psalms 16:7)</h2>    		</div>    	</div>    	<div style="margin: 10px;border: 0px solid #333;clear: both;">    	<hr>			<div>				<textarea cols='150' rows='8' id='ta'>Select one to copy from here!</textarea>			</div>			<div>			<ol>				<li>Admin in which facilities <input type='button' value='DO' onclick='showsql(0)'></li>				<li>Inventory Location Check for product <input type='button' value='DO' onclick='showsql(1)'></li>				<li>Order by ID <input type='button' value='DO' onclick='showsql(2)'></li>				<li>Check Shipments for batch pick <input type='button' value='DO' onclick='showsql(3)'></li>			</ol>			</div>    	</div>    </div>    </body></html>
