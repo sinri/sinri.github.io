@@ -1,0 +1,110 @@
+/*******************************************************************************************************************
+*  Author: Tomas Lach (www.tomaslach.cz)                                                                           *
+*  Date: 11.05.2011                                                                                                *
+*******************************************************************************************************************/
+@import url('jquery.fancybox-1.3.4.css');
+@import url('jquery.nivo.slider.css');
+@import url('font.css');
+
+html {background: #ececec url('../img/background.png');}
+body {color: #313031;font: normal 12px Arial,sans-serif;}
+p {font-size: 1.0em;line-height: 1.8em;margin-bottom: 15px}
+address {font-style: normal;padding-bottom: 15px}
+
+/*******************************************************************************************************************
+*  LINKS                                                                                                           *
+*******************************************************************************************************************/
+a, a:link, a:focus {color: #4cb9e1;outline: 0}
+a:visited {color: #4cb9e1}
+a:hover {color: #000;text-decoration: none}
+a.more {padding: 4px 0 4px 0;display: inline-block;}
+
+/*******************************************************************************************************************
+*  TITLES                                                                                                          *
+*******************************************************************************************************************/
+h1, h2, h3, h4, h5 {margin: 0 0 15px 0;color: #3b3b3b;font-weight: bold;}
+h1 {font-size: 2.0em;margin-bottom: 15px;}
+h2 {font-size: 1.2em;margin-bottom: 20px;}
+h3 {font-size: 1.3em;margin-bottom: 20px;}
+h4 {font-size: 1.2em;}
+h5 {font-size: 1.1em}
+
+#wrap {padding-bottom: 0}
+#layout {padding-top: 430px}
+
+/*******************************************************************************************************************
+*  HEADER                                                                                                          *
+*******************************************************************************************************************/
+#header {position: absolute;top: 0;left: 0;width: 100%;z-index: 90;}
+#header #logo {display: block;left: 0;z-index: 10;position: absolute;top: 35px;width: 97px;height: 38px;color: #fff;text-decoration: none;text-indent: -9999px;background: url('../img/logo.png') no-repeat} #header #branch_1 {display: block;left: 120px;z-index: 10;position: absolute;top: 40px;width: 80px;height: 38px;color: gray;text-decoration: none;/*text-indent: -9999px;*/font-size: 20px;}   #header #branch_2 {display: block;left: 210px;z-index: 10;position: absolute;top: 40px;width: 80px;height: 38px;color: gray;text-decoration: none;/*text-indent: -9999px;*/font-size: 20px;}                
+/* navigation */
+#header #navigation {position: absolute;right: 0;top: 25px;}
+#header #navigation li {display: block;float: left;margin-right: 1px}
+#header #navigation li a {display: block;float: left;padding: 15px 15px;text-decoration: none;color: #636363;text-shadow: 1px 1px 1px #fff;-webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px;}
+#header #navigation li.active a {;font-weight: bold;background: url('../img/navigation-active.png');}
+#header #navigation li:hover a {background: url('../img/navigation-active.png');}
+/* search */
+#header #search {position: absolute;top: 34px;right: 0}
+#header #search .text {background: url('../img/search.png') no-repeat;border: 0;color: #606368;text-shadow: 1px 1px 1px #1c1e20;width: 211px;height: 21px;padding: 5px 10px 5px 30px}
+
+/*******************************************************************************************************************
+*  INTRO                                                                                                           *
+*******************************************************************************************************************/
+#intro {background: url('../img/shadow.png') no-repeat bottom;padding-bottom: 16px;position: absolute;top: 98px;left: 0;z-index: 100;}
+#sliderWrap {border: 1px solid #cdcdcd;padding: 9px;background: #fff;}
+#slider {width: 920px;height: 254px}
+/*******************************************************************************************************************
+*  CONTENT                                                                                                         *
+*******************************************************************************************************************/
+#container {border: 1px solid #d6d6d6;background: #fff;}
+#container #content {padding: 30px;border-bottom: 1px solid #ebebeb}
+.shadow {height: 16px;width: 100%;background: url('../img/shadow.png')}
+#container div.theme {	font-size: 30px;	font-weight: bold;	margin: 20px;}#container div.theme_description {	font-size: 20px;	margin-top: 10px;	margin-bottom: 10px;	margin-left: 30px;	margin-right: 30px;}
+#container ul {padding: 5px 10px 25px 40px;list-style: disc}
+#container ul li {padding: 3px 0 3px 5px;}
+#container ul.cols {list-style: none;padding: 0;margin: 0;/*border-bottom: 2px solid #f3f3f3*/}
+#container ul.cols li {padding: 6px 0 20px 50px;width: 210px;float: left;}
+#container ul.cols li.center {margin: 0 45px;}#container ul.cols li.c0 {background: url('../img/next.png') no-repeat}
+#container ul.cols li.c1 {background: url('../img/1.png') no-repeat}
+#container ul.cols li.c2 {background: url('../img/2.png') no-repeat}
+#container ul.cols li.c3 {background: url('../img/3.png') no-repeat}
+
+#container .gallery img {margin: 0 20px 20px 0;float: left}
+
+#container table {width: 100%;border-collapse: collapse;border: 1px solid #efefef}
+#container table th {text-align: left;padding: 10px;border: 1px solid #69a000;border-bottom: 3px solid #8ace07;background: #69a000;color: #fff}
+#container table td {padding: 7px 10px;border: 1px solid #efefef}
+#container table .dark td {background: #f7f7f7}
+
+#container form {margin-bottom: 20px}
+#container form fieldset {background: #f7f7f7;padding: 10px 15px;border: 1px solid #efefef}
+#container form table {width: 100%;border: 0}
+#container form th {padding: 10px 0 10px 0;border: 0;background: none;color: #000;text-align: left;width: 30%;vertical-align: top}
+#container form td {padding: 5px 20px 5px 0;width: 70%;border: 0}
+#container form .text {padding: 5px;width: 199px;}
+#container form .textarea {padding: 5px;width:338px;height:158px;}
+#container form .checkbox {width: 20px;height: 20px;float: left;position: relative;top: -4px;margin-right: 2px}
+#container form .radio {width: 20px;height: 20px;float: left;position: relative;top: -5px;margin-right: 2px}
+#container form tfoot td {padding-top: 10px}
+#container form .submit {cursor: pointer;padding: 5px 10px;font-weight: bold;text-transform: uppercase;font-family: Arial;font-size: 1.0em;}
+    
+/*******************************************************************************************************************
+*  FOOTER                                                                                                          *
+*******************************************************************************************************************/
+#footer {background: #f0f0f0 /*url('../img/footer-background-repeat.png') repeat-x; */height: 165px;margin-bottom: 0}
+#footerBackground {background: /*url('../img/footer-background-center.png') no-repeat 50% 0;*/height: 165px;margin-bottom: 0}
+#footer p {color: #878787;font-size: 11px;padding: 0 20px;margin: 0;line-height: 65px}
+#footer p a {color: #878787;}
+
+/*******************************************************************************************************************
+*  OTHER STYLES                                                                                                    *
+*******************************************************************************************************************/
+.high {font-weight: bold;color: #2d7bac}
+.inner {padding: 15px 20px}
+.middle {margin: 0 auto;position: relative;}
+.w940 {width: 940px}
+.w600 {width: 600px}
+.w220 {width: 250px}
+a.thumb img {border: 1px solid #e4e4e4}
+.inner_copyright{text-indent:-9999px;height:0;line-height:0;font-size:0;overflow:hidden;}
+
