@@ -2,19 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta http-equiv="content-language" content="cs" />
-        <meta name="author" lang="cs" content="Tomáš Lach | HTML Kodér - www.tomaslach.cz" />
-        <meta name="copyright" lang="cs" content="Tomáš Lach | HTML Kodér - www.tomaslach.cz" />
+        <meta http-equiv="content-language" content="en" />
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="robots" content="all,follow" />
-        <link rel="shortcut icon" href="img/favicon.ico" />
+        <link rel="shortcut icon" href="../img/favicon.ico" />
         
         <link href="../css/main_sub.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
         <style type="text/css">
             input[type="text"] {
-                background-color: red;
+                /*background-color: red;*/
+                width: 200px;
             }
         </style>
 
@@ -28,7 +27,7 @@
         -->
         <script type="text/javascript" src="../js/ajax/baseAJAX.js"></script>
         <script type="text/javascript">
-            function makeBroadcastBody(appkey,timestamp,validation_token,alert){
+            function makeBroadcastBody(appkey,timestamp,validation_token,alert,isNotDev){
                 var body='{ \
                    "appKey":"'+appkey+'", \
                    "timestamp":"'+timestamp+'", \
@@ -37,8 +36,24 @@
                    "payload":{ \
                        "aps":{ "alert":"'+alert+'"} \
                     }, \
-                   "description":"guthub_online_apn" \
+                   "description":"guthub_online_apn", \
+                   "production_mode":"'+isNotDev+'" \
                 }';
+                return body;
+            }
+            function makeBroadcastBody_mad(appkey,timestamp,validation_token,alert,isNotDev){
+                var body=' author",\
+                   "appKey":"'+appkey+'", \
+                   "timestamp":"'+timestamp+'", \
+                   "validation_token":"'+validation_token+'", \
+                   "type":"broadcast", \
+                   "payload":{ \
+                       "aps":{ "alert":"'+alert+'"} \
+                    }, \
+                   "description":"guthub_online_apn", \
+                   "production_mode":"'+isNotDev+'" \
+                }';
+                return body;
             }
         	function setUmengPackage(){
         		var appkey=document.getElementById('umeng_appkey').value;
@@ -47,7 +62,7 @@
                 document.getElementById('umeng_timestamp').value=timestamp;
                 var validation_token=CryptoJS.MD5(appkey+appmaskey+timestamp);
         		document.getElementById('umeng_validation_token').value=validation_token;
-                return makeBroadcastBody(appkey,timestamp,validation_token,'alert');
+                return makeBroadcastBody(appkey,timestamp,validation_token,'alert','false');
         	}
             function umeng_test_go(){
                 var body=setUmengPackage();
@@ -64,6 +79,18 @@
                 });
                 
             }
+            function mad(){
+                var appkey=document.getElementById('umeng_appkey').value;
+                var appmaskey=document.getElementById('umeng_appmaskey').value;
+                var timestamp=new Date().getTime();
+                //document.getElementById('umeng_timestamp').value=timestamp;
+                var validation_token=CryptoJS.MD5(appkey+appmaskey+timestamp);
+                //document.getElementById('umeng_validation_token').value=validation_token;
+                var isNotDev=document.getElementById('isNotDevCB').checked?'true':'false';
+                var alert=document.getElementById('my_alert').value;
+                var body = makeBroadcastBody_mad(appkey,timestamp,validation_token,alert,isNotDev);
+                document.getElementById('umeng_textarea').innerHTML=body;
+            }
         </script>
     </head>
     <body>  
@@ -79,26 +106,44 @@
     	</div>
     	<hr>
     	<div style="margin: 10px;border: 0px solid #333;float: clear;">
-    		<div>
+            <!--
+    		<div style="display:none">
     			<fieldset>
     				<legend>Umeng MD5 TEST</legend>
                     <p>http://msg.umeng.com/api/send | http://localhost/requestTest.php</p>
     				<form action="http://msg.umeng.com/api/send" method="POST" enctype='application/json'>
-    					<p>AppKey:<input type="text" id="umeng_appkey" name="appKey" readonly="readonly" value="540933fefd98c548ce00f96f"></p>
-    					<p>AppMasterKey:<input type="text" id="umeng_appmaskey" readonly="readonly" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
-    					<p>timestamp:<input type="text" id="umeng_timestamp" name="timestamp" value=""></p>
-    					<p>validation_token:<input id="umeng_validation_token" type="text" name="validation_token" value=""></p>
+    					<input type="hidden" id="umeng_appkey" name="appKey" readonly="readonly" value="540933fefd98c548ce00f96f">
+    					<input type="hidden" id="umeng_appmaskey" readonly="readonly" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
+    					<input type="hidden" id="umeng_timestamp" name="timestamp" value="">
+    					<input id="umeng_validation_token" type="hidden" name="validation_token" value="">
                         <p>Alert:<input type="text" name="payload[aps][alert]" value="alert"></p>
                         <p>Is not test:<input type="text" name='production_mode' value="false"></p>
     					<p><input type="button" value="GO" onclick="setUmengPackage();this.form.submit();"></p>
 
                         <input type="hidden" name="type" value="broadcast">
                         <input type="hidden" name="description" value="guthub_online_apn">
-                        
-                        
     				</form>
     			</fieldset>
     		</div>
+            -->
+            <div>
+                <fieldset>
+                    <legend>Umeng Apple Push Page For WhereWeAre Project</legend>
+                    <p>Use the basic html to generate Umeng Apple Push POST Request [broadcast]</p>
+                    <form action="http://msg.umeng.com/api/send" method="POST" enctype="text/plain">
+                        Alert:<input type="text" id="my_alert">
+                        <input type="checkbox" id="isNotDevCB">Not Develop Mode
+                        <div style="display:none">
+                            <input type="hidden" id="umeng_appkey"readonly="readonly" value="540933fefd98c548ce00f96f">
+                            <input type="hidden" id="umeng_appmaskey" readonly="readonly" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
+                            <input type="hidden" id="umeng_timestamp" value="">
+                            <input id="umeng_validation_token" type="hidden" value="">
+                            <textarea name='{"sinri":"' id="umeng_textarea"></textarea>
+                        </div>
+                        <input type="button" value="send" onclick="mad();this.form.submit();">
+                    </form>
+                </fieldset>
+            </div>
     	</div>
     </div>
     </body>
