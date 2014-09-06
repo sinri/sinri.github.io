@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta http-equiv="content-language" content="cs" />
+        <meta name="author" lang="cs" content="Tomáš Lach | HTML Kodér - www.tomaslach.cz" />
+        <meta name="copyright" lang="cs" content="Tomáš Lach | HTML Kodér - www.tomaslach.cz" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+        <meta name="robots" content="all,follow" />
+        <link rel="shortcut icon" href="img/favicon.ico" />
+        
+        <link href="../css/main_sub.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+        <title>EVERSTRAY'S</title>
+        <!---->
+        <script type="text/javascript" src="../js/lib/CryptoJS_v3.1.2/rollups/md5.js"></script>
+        <!---->
+        <!--
+        <script type="text/javascript" src="../js/lib/md5.js"></script>
+        -->
+        <script type="text/javascript">
+        	function setUmengValiToken(){
+        		var appkey=document.getElementById('umeng_appkey').value;
+        		var appmaskey=document.getElementById('umeng_appmaskey').value;
+        		var timestamp=document.getElementById('umeng_timestamp').value;
+        		document.getElementById('umeng_validation_token').value=CryptoJS.MD5(appkey+appmaskey+timestamp);
+        	}
+        </script>
+    </head>
+    <body>  
+    <div style="margin: 20px;">
+    	<div>
+    		<a href="http://github.everstray.com"  style="float: left;">
+    			<img src="../img/logo.png" alt="logo" style="float: left;" />
+    		</a>
+    		<div style="margin-left: 200px; ">
+    			<h1>Sinri Common Test</h1>
+    			<h2>Thou, which hast shewed me great and sore troubles, shalt quicken me again, and shalt bring me up again from the depths of the earth. (Psalms 71:20)</h2>
+    		</div>
+    	</div>
+    	<hr>
+    	<div style="margin: 10px;border: 0px solid #333;float: clear;">
+    		<div>
+    			<fieldset>
+    				<legend>Umeng MD5 TEST</legend>
+    				<form>
+    					<p>AppKey:<input type="text" id="umeng_appkey" name="appkey" value="540933fefd98c548ce00f96f"></p>
+    					<p>AppMasterKey:<input type="text" id="umeng_appmaskey" name="appmaskey" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
+    					<p>timestamp:<input type="text" id="umeng_timestamp" name="timestamp" value="1409999984"></p>
+    					<p>validation_token:<input id="umeng_validation_token" type="text" name="validation_token" value=""></p>
+    					<p><input type="button" onclick="setUmengValiToken();"></p>
+    				</form>
+    			</fieldset>
+    		</div>
+    	</div>
+    </div>
+    </body>
+</html>
