@@ -12,20 +12,58 @@
         
         <link href="../css/main_sub.css" type="text/css" rel="stylesheet" media="screen,projection" />
 
+        <style type="text/css">
+            input[type="text"] {
+                background-color: red;
+            }
+        </style>
+
         <title>EVERSTRAY'S</title>
         <!---->
         <script type="text/javascript" src="../js/lib/CryptoJS_v3.1.2/rollups/md5.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
         <!---->
         <!--
         <script type="text/javascript" src="../js/lib/md5.js"></script>
         -->
+        <script type="text/javascript" src="../js/ajax/baseAJAX.js"></script>
         <script type="text/javascript">
-        	function setUmengValiToken(){
+            function makeBroadcastBody(appkey,timestamp,validation_token,alert){
+                var body='{ \
+                   "appKey":"'+appkey+'", \
+                   "timestamp":"'+timestamp+'", \
+                   "validation_token":"'+validation_token+'", \
+                   "type":"broadcast", \
+                   "payload":{ \
+                       "aps":{ "alert":"'+alert+'"} \
+                    }, \
+                   "description":"guthub_online_apn" \
+                }';
+            }
+        	function setUmengPackage(){
         		var appkey=document.getElementById('umeng_appkey').value;
         		var appmaskey=document.getElementById('umeng_appmaskey').value;
-        		var timestamp=document.getElementById('umeng_timestamp').value;
-        		document.getElementById('umeng_validation_token').value=CryptoJS.MD5(appkey+appmaskey+timestamp);
+        		var timestamp=new Date().getTime();
+                document.getElementById('umeng_timestamp').value=timestamp;
+                var validation_token=CryptoJS.MD5(appkey+appmaskey+timestamp);
+        		document.getElementById('umeng_validation_token').value=validation_token;
+                return makeBroadcastBody(appkey,timestamp,validation_token,'alert');
         	}
+            function umeng_test_go(){
+                var body=setUmengPackage();
+                //alertPostBodyFromAJAX("http://msg.umeng.com/api/send",body);
+                
+                $.ajax({
+                    type: "POST",
+                    url: "http://msg.umeng.com/api/send",
+                    processData: false,
+                    contentType: 'application/json',
+                    data: JSON.stringify(body),
+                    success: function(r) {
+                    }
+                });
+                
+            }
         </script>
     </head>
     <body>  
@@ -44,12 +82,17 @@
     		<div>
     			<fieldset>
     				<legend>Umeng MD5 TEST</legend>
-    				<form>
-    					<p>AppKey:<input type="text" id="umeng_appkey" name="appkey" value="540933fefd98c548ce00f96f"></p>
-    					<p>AppMasterKey:<input type="text" id="umeng_appmaskey" name="appmaskey" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
-    					<p>timestamp:<input type="text" id="umeng_timestamp" name="timestamp" value="1409999984"></p>
+                    <p>http://msg.umeng.com/api/send | http://localhost/requestTest.php</p>
+    				<form action="http://msg.umeng.com/api/send" method="POST" enctype='application/json'>
+    					<p>AppKey:<input type="text" id="umeng_appkey" name="appKey" readonly="readonly" value="540933fefd98c548ce00f96f"></p>
+    					<p>AppMasterKey:<input type="text" id="umeng_appmaskey" readonly="readonly" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
+    					<p>timestamp:<input type="text" id="umeng_timestamp" name="timestamp" value=""></p>
     					<p>validation_token:<input id="umeng_validation_token" type="text" name="validation_token" value=""></p>
-    					<p><input type="button" onclick="setUmengValiToken();"></p>
+    					<p><input type="button" value="GO" onclick="umeng_test_go();/*setUmengPackage();this.form.submit();*/"></p>
+
+                        <input type="hidden" name="type" value="broadcast">
+                        <input type="hidden" name="description" value="guthub_online_apn">
+                        <input type="hidden" name="payload[aps][alert]" value="alert">
     				</form>
     			</fieldset>
     		</div>
