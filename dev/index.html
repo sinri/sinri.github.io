@@ -88,11 +88,14 @@
     					<p>AppMasterKey:<input type="text" id="umeng_appmaskey" readonly="readonly" value="uh7fhfofokuekhradhp1yjkyobd3nnqv"></p>
     					<p>timestamp:<input type="text" id="umeng_timestamp" name="timestamp" value=""></p>
     					<p>validation_token:<input id="umeng_validation_token" type="text" name="validation_token" value=""></p>
+                        <p>Alert:<input type="text" name="payload[aps][alert]" value="alert"></p>
+                        <p>Is not test:<input type="text" name='production_mode' value="false"></p>
     					<p><input type="button" value="GO" onclick="setUmengPackage();this.form.submit();"></p>
 
                         <input type="hidden" name="type" value="broadcast">
                         <input type="hidden" name="description" value="guthub_online_apn">
-                        <input type="hidden" name="payload[aps][alert]" value="alert">
+                        
+                        
     				</form>
     			</fieldset>
     		</div>
