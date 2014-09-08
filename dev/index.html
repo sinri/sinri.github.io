@@ -23,6 +23,25 @@
             #div_id_javaBuildTargetStore a { color:#666!important; border:1px solid #666; text-decoration:none; padding:3px 5px; }
             #div_id_javaBuildTargetStore a:hover, #div_id_javaBuildTargetStore a.hover { color:#ff6699!important; border:1px solid #ff6699; }
             #div_id_javaBuildTargetStore a:active, #div_id_javaBuildTargetStore a.active { color:#fff!important; background:#ff6699; border:1px solid #ff6699; }
+
+            div.content_part {
+                margin: 10px;float: clear;
+            }
+
+            fieldset legend{
+                font-size: 2em;
+                border: 1px solid gray;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: 1.5em;
+                margin: 5px;
+            }
+            div.h2_content{
+                padding: 20px;
+                background-color: white;
+            }
         
         </style>
 
@@ -74,16 +93,8 @@
                     copy:function(){
                         return $('textarea#ta_id_javaBuildTargetStore').val();
                     },
-                    //beforeCopy:function(){
-                        //$('#copy_ta_id_javaBuildTargetStore').css('background','yellow');
-                        //$(this).css('color','orange');
-                        //alert("!");
-                    //},
                     afterCopy:function(){
-                        //$('#copy_ta_id_javaBuildTargetStore').css('background','green');
-                        //$(this).css('color','purple');
-                        //$(this).next('.check').show();
-                        alert("!!");
+                        alert("Copied into your clipboard!");
                     }
                 });
             });
@@ -97,59 +108,69 @@
     			<img src="../img/logo.png" alt="logo" style="float: left;" />
     		</a>
     		<div style="margin-left: 200px; ">
-    			<h1>Sinri Develop Library</h1>
+    			<h1>Sinri Develop Laboratory</h1>
     			<h2>Blessed are ye of Jehovah, Who made heaven and earth. (Psalms 115:15)</h2>
     		</div>
     	</div>
     	<hr>
-    	<div style="margin: 10px;border: 0px solid #333;float: clear;">
-            <div>
-                <fieldset>
-                    <legend>Java Build Target of Store</legend>
-                    <div id="div_id_javaBuildTargetStore">
-                        Copy the following target node into build.xml of NetBeans Java Project.
-                        <a href="#" id="copy_ta_id_javaBuildTargetStore">Copy Now</a>
-                    </div>
-                    <textarea id="ta_id_javaBuildTargetStore" style="width:99%;height:100px;margin:auto;">
-    <target name="package-for-store" depends="jar">
+    	<div class="content_part">
+            <a name="java"></a>
+            <fieldset>
+                <legend>Java</legend>
+                <h2>Java Build Target of Store</h2>
+                <div id="div_id_javaBuildTargetStore" class="h2_content">
+                    Copy the following target node into build.xml of NetBeans Java Project.
+                    <a href="#" id="copy_ta_id_javaBuildTargetStore">Copy Now</a>
+                </div>
+                <textarea id="ta_id_javaBuildTargetStore" style="width:99%;height:100px;margin:auto; display:none;">
+<target name="package-for-store" depends="jar">
 
-        <!-- Change the value of this property to be the name of your JAR,
-             minus the .jar extension. It should not have spaces.
-             <property name="store.jar.name" value="MyJarName"/>
-        -->
-        <property name="store.jar.name" value="RMLaura"/>
+    <!-- Change the value of this property to be the name of your JAR,
+         minus the .jar extension. It should not have spaces.
+         <property name="store.jar.name" value="MyJarName"/>
+    -->
+    <property name="store.jar.name" value="RMLaura"/>
 
 
-        <!-- don't edit below this line -->
+    <!-- don't edit below this line -->
 
-        <property name="store.dir" value="store"/>
-        <property name="store.jar" value="${store.dir}/${store.jar.name}.jar"/>
+    <property name="store.dir" value="store"/>
+    <property name="store.jar" value="${store.dir}/${store.jar.name}.jar"/>
 
-        <echo message="Packaging ${application.title} into a single JAR at ${store.jar}"/>
+    <echo message="Packaging ${application.title} into a single JAR at ${store.jar}"/>
 
-        <delete dir="${store.dir}"/>
-        <mkdir dir="${store.dir}"/>
+    <delete dir="${store.dir}"/>
+    <mkdir dir="${store.dir}"/>
 
-        <jar destfile="${store.dir}/temp_final.jar" filesetmanifest="skip">
-            <zipgroupfileset dir="dist" includes="*.jar"/>
-            <zipgroupfileset dir="dist/lib" includes="*.jar"/>
+    <jar destfile="${store.dir}/temp_final.jar" filesetmanifest="skip">
+        <zipgroupfileset dir="dist" includes="*.jar"/>
+        <zipgroupfileset dir="dist/lib" includes="*.jar"/>
 
-            <manifest>
-                <attribute name="Main-Class" value="${main.class}"/>
-            </manifest>
-        </jar>
+        <manifest>
+            <attribute name="Main-Class" value="${main.class}"/>
+        </manifest>
+    </jar>
 
-        <zip destfile="${store.jar}">
-            <zipfileset src="${store.dir}/temp_final.jar"
-            excludes="META-INF/*.SF, META-INF/*.DSA, META-INF/*.RSA"/>
-        </zip>
+    <zip destfile="${store.jar}">
+        <zipfileset src="${store.dir}/temp_final.jar"
+        excludes="META-INF/*.SF, META-INF/*.DSA, META-INF/*.RSA"/>
+    </zip>
 
-        <delete file="${store.dir}/temp_final.jar"/>
-
-    </target>
-                    </textarea>
-                </fieldset>
-            </div>
+    <delete file="${store.dir}/temp_final.jar"/>
+</target>
+                </textarea>
+            </fieldset>
+        </div>
+        <div class="content_part">
+            <a name="ios"></a>
+            <fieldset>
+                <legend>iOS</legend>
+                <h2>Umeng HTML Push Demo</h2>
+                <div id="div_id_javaBuildTargetStore" class="h2_content">
+                    An actually useless HTML Push Sender for Umeng Apple Push Service. 
+                    <a href="umeng_html_sender.html">Gaze It</a>
+                </div>
+            </fieldset>
     	</div>
     </div>
     </body>
