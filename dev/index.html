@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"> 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cs" lang="cs">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
         <meta http-equiv="content-language" content="en" />
@@ -63,7 +63,7 @@
                 $('a#copy_ta_id_javaBuildTargetStore').zclip({
                     path:'../js/zclip/ZeroClipboard.swf',
                     copy:function(){
-                        return "All Hail Sinri Edogawa!";//$('textarea#ta_id_javaBuildTargetStore').val();
+                        return $('textarea#ta_id_javaBuildTargetStore').val();
                     },
                     beforeCopy:function(){
                         //$('#callback-paragraph').css('background','yellow');
@@ -99,7 +99,7 @@
                     <legend>Java Build Target of Store</legend>
                     <p>
                         Copy the following target node into build.xml of NetBeans Java Project.
-                        <a href="javascript:void(0);" id="copy_ta_id_javaBuildTargetStore">Copy Now</a>
+                        <a href="#" id="copy_ta_id_javaBuildTargetStore" style="margin: auto;">Copy Now</a>
                     </p>
                     <textarea id="ta_id_javaBuildTargetStore" style="width:99%;height:100px;margin:auto;">
     <target name="package-for-store" depends="jar">
