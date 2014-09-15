@@ -36,7 +36,9 @@ h5 {font-size: 1.1em}
 *  HEADER                                                                                                          *
 *******************************************************************************************************************/
 #header {position: absolute;top: 0;left: 0;width: 100%;z-index: 90;}
-#header #logo {display: block;left: 0;z-index: 10;position: absolute;top: 35px;width: 97px;height: 38px;color: #fff;text-decoration: none;text-indent: -9999px;background: url('../img/logo.png') no-repeat} #header #branch_1 {display: block;left: 120px;z-index: 10;position: absolute;top: 40px;width: 80px;height: 38px;color: gray;text-decoration: none;/*text-indent: -9999px;*/font-size: 20px;}   #header #branch_2 {display: block;left: 210px;z-index: 10;position: absolute;top: 40px;width: 80px;height: 38px;color: gray;text-decoration: none;/*text-indent: -9999px;*/font-size: 20px;}                
+#header #logo {display: block;left: 0;z-index: 10;position: absolute;top: 35px;width: 97px;height: 38px;color: #fff;text-decoration: none;text-indent: -9999px;background: url('../img/logo.png') no-repeat} 
+#header #branch_1 {display: block;left: 120px;z-index: 10;position: absolute;top: 40px;width: 80px;height: 38px;color: gray;text-decoration: none;/*text-indent: -9999px;*/font-size: 20px;}   
+#header #branch_2 {display: block;left: 210px;z-index: 10;position: absolute;top: 40px;width: 80px;height: 38px;color: gray;text-decoration: none;/*text-indent: -9999px;*/font-size: 20px;}                
 /* navigation */
 #header #navigation {position: absolute;right: 0;top: 25px;}
 #header #navigation li {display: block;float: left;margin-right: 1px}
@@ -58,15 +60,54 @@ h5 {font-size: 1.1em}
 *******************************************************************************************************************/
 #container {border: 1px solid #d6d6d6;background: #fff;}
 #container #content {padding: 30px;border-bottom: 1px solid #ebebeb}
-.shadow {height: 16px;width: 100%;background: url('../img/shadow.png')}#subPageContainer{/*	position: absolute;	top: 150px;	left: 0;	*/	margin-top: 10px;}#container div.theme {	font-size: 30px;	font-weight: bold;	margin: 20px;}#container div.theme_description {	font-size: 20px;	margin-top: 10px;	margin-bottom: 10px;	margin-left: 30px;	margin-right: 30px;}
+.shadow {height: 16px;width: 100%;background: url('../img/shadow.png')}
+
+#subPageContainer{
+/*
+	position: absolute;
+	top: 150px;
+	left: 0;
+	*/
+	margin-top: 10px;
+}
+
+#container div.theme {
+	font-size: 30px;
+	font-weight: bold;
+	margin: 20px;
+}
+#container div.theme_description {
+	font-size: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	margin-right: 30px;
+}
+
 #container ul {padding: 5px 10px 25px 40px;list-style: disc}
-#container ul li {padding: 3px 0 3px 5px;}
+#container ul li {padding: 3px 0 3px 5px;}
+
 #container ul.cols {list-style: none;padding: 0;margin: 0;/*border-bottom: 2px solid #f3f3f3*/}
-#container ul.cols li {padding: 6px 0 20px 50px;width: 210px;float: left;}
-#container ul.cols li.center {margin: 0 45px;}#container ul.cols li.newsRow {background: url('../img/mailnew.png') no-repeat;width: 800px;}#container ul.cols li.iosAppItem {background: url('../img/iosapp_ura.png') no-repeat}#container ul.cols li.iosAppItemPending {background: url('../img/iosapp_gray.png') no-repeat}#container ul.cols li.t0 {background: url('../img/hanenofude_small.png') no-repeat}#container ul.cols li.j0 {background: url('../img/cloud.png') no-repeat}#container ul.cols li.c0 {background: url('../img/chirho.png') no-repeat}
+#container ul.cols li {padding: 6px 0 20px 50px;width: 210px;height:150px;float: left;}
+#container ul.cols li.center {margin: 0 45px;}
+#container ul.cols li.newsRow {background: url('../img/mailnew.png') no-repeat;width: 800px;}
+#container ul.cols li.iosAppItem {background: url('../img/iosapp_ura.png') no-repeat}
+#container ul.cols li.iosAppItemPending {background: url('../img/iosapp_gray.png') no-repeat}
+#container ul.cols li.t0 {background: url('../img/hanenofude_small.png') no-repeat}
+#container ul.cols li.j0 {background: url('../img/cloud.png') no-repeat}
+#container ul.cols li.c0 {background: url('../img/chirho.png') no-repeat}
 #container ul.cols li.c1 {background: url('../img/1.png') no-repeat}
 #container ul.cols li.c2 {background: url('../img/2.png') no-repeat}
-#container ul.cols li.c3 {background: url('../img/3.png') no-repeat}#container ul.cols li h2 span.date {	font-size: 0.8em;	color: gray;	font-weight: normal;	margin-left: 50px;}
+#container ul.cols li.c3 {background: url('../img/3.png') no-repeat}
+
+#container ul.cols li h2 span.date {
+	font-size: 0.8em;
+	color: gray;
+	font-weight: normal;
+	margin-left: 50px;
+}
+
+
 
 #container .gallery img {margin: 0 20px 20px 0;float: left}
 
