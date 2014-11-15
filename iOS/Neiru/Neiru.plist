@@ -19,11 +19,11 @@
 				<key>bundle-identifier</key>
 				<string>com.leqee.Neiru</string>
 				<key>bundle-version</key>
-				<string>1.0.3</string>
+				<string>1.0.4</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>AbeCat 1.0.3</string>
+				<string>AbeCat 1.0.4</string>
 			</dict>
 		</dict>
 	</array>
