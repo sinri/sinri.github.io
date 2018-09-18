@@ -1,30 +1,0 @@
-/*******************************************************************************************************************
-*  Author: Tomas Lach (www.tomaslach.cz)                                                                           *
-*  Date: 11.05.2011                                                                                                *
-*******************************************************************************************************************/
-@import url('jquery.fancybox-1.3.4.css');
-@import url('jquery.nivo.slider.css');
-@import url('font.css');
-
-html {background: #ececec url('../img/background.png');}
-body {color: #313031;font: normal 12px Arial,sans-serif;}
-p {font-size: 1.2em;line-height: 1.8em;margin-bottom: 15px}
-address {font-style: normal;padding-bottom: 15px}
-
-/*******************************************************************************************************************
-*  LINKS                                                                                                           *
-*******************************************************************************************************************/
-a, a:link, a:focus {color: #4cb9e1;outline: 0}
-a:visited {color: #4cb9e1}
-a:hover {color: #000;text-decoration: none}
-a.more {padding: 4px 0 4px 0;display: inline-block;}
-
-/*******************************************************************************************************************
-*  TITLES                                                                                                          *
-*******************************************************************************************************************/
-h1, h2, h3, h4, h5 {margin: 0 0 15px 0;color: #3b3b3b;font-weight: bold;}
-h1 {font-size: 2.0em;margin-bottom: 15px;}
-h2 {font-size: 1.2em;margin-bottom: 20px;}
-h3 {font-size: 1.5em;margin-bottom: 20px;}
-h4 {font-size: 1.4em;}
-h5 {font-size: 1.3em}#container {border: 1px solid #d6d6d6;background: #fff;}#container #content {padding: 30px;border-bottom: 1px solid #ebebeb}.shadow {height: 16px;width: 100%;background: url('../img/shadow.png')}
