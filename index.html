@@ -102,7 +102,7 @@
         },
         computed: {
             compiledMarkdown: function () {
-                return marked(this.markdownContent, {sanitize: true})
+                return marked(this.markdownContent, {sanitize: false})
             }
         },
         methods: {
