@@ -15,77 +15,77 @@
                 {
                     "type":"markdown",
                     "title":"Since Adam",
-                    "link":"BibleTimelineProject/main.md"
+                    "link":"BibleTimelineProject/SinceAdam.md"
                 }
             ]
         },
         {
             "type":"folder",
-            "title":"OneDayOneLife",
+            "title":"一日一生",
             "pages":[
                 {
                     "type":"markdown",
-                    "title":"Index",
+                    "title":"前言",
                     "link":"OneDayOneLife/index.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"01",
+                    "title":"睦月",
                     "link":"OneDayOneLife/01.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"02",
+                    "title":"如月",
                     "link":"OneDayOneLife/02.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"03",
+                    "title":"弥生",
                     "link":"OneDayOneLife/03.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"04",
+                    "title":"卯月",
                     "link":"OneDayOneLife/04.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"05",
+                    "title":"皐月",
                     "link":"OneDayOneLife/05.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"06",
+                    "title":"水無月",
                     "link":"OneDayOneLife/06.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"07",
+                    "title":"文月",
                     "link":"OneDayOneLife/07.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"08",
+                    "title":"葉月",
                     "link":"OneDayOneLife/08.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"09",
+                    "title":"長月",
                     "link":"OneDayOneLife/09.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"10",
+                    "title":"神無月",
                     "link":"OneDayOneLife/10.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"11",
+                    "title":"霜月",
                     "link":"OneDayOneLife/11.md"
                 },
                 {
                     "type":"markdown",
-                    "title":"12",
+                    "title":"師走",
                     "link":"OneDayOneLife/12.md"
                 }
             ]
