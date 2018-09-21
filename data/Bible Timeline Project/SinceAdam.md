@@ -1,8 +1,4 @@
-# Bible Timeline Project
-
-> It is the glory of God to conceal a thing: but the honour of kings is to search out a matter. (Proverb 25:2)
-
-## Since Adam
+# Since Adam
 
 Update 2014 June
 
@@ -14,7 +10,7 @@ Update 2014 August
 
 故里之胡东瑶，共享其成果以校对，更举430年寄居之年数，引利未至摩西年数之不足，并例举撒玛利亚五经及七十子译本，言其寄居非仅埃及，更有包括迦南之倾向。虽撒玛利亚五经名称可疑，马所里之抄本不解其困境，难以自圆，故当采信之。
 
-[旧约初年断代表 -- 胡东瑶](./data/BibleTimelineProject/BibleTimelineByHuDongyao.pdf)
+[旧约初年断代表 -- 胡东瑶](./data/Bible%20Timeline%20Project/BibleTimelineByHuDongyao.pdf)
 
 ```
 Year    Event

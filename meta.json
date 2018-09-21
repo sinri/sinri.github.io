@@ -1,92 +1,97 @@
 {
-    "avatar":"https://avatars2.githubusercontent.com/u/5821330?s=460&v=4",
-    "site_title":"Sinri@GitHub",
-    "site_declaration":"Copyright 2018 Sinri Edogawa",
-    "menu":[
+    "avatar": "https:\/\/avatars2.githubusercontent.com\/u\/5821330?s=460&v=4",
+    "site_title": "Sinri@GitHub",
+    "site_declaration": "Copyright 2018 Sinri Edogawa",
+    "menu": [
         {
-            "type":"markdown",
-            "title":"Welcome",
-            "link":"welcome.md"
+            "type": "markdown",
+            "title": "Welcome",
+            "link": "welcome.md"
         },
         {
-            "type":"folder",
-            "title":"Bible Timeline Project",
-            "pages":[
+            "type": "folder",
+            "title": "Bible Timeline Project",
+            "pages": [
                 {
-                    "type":"markdown",
-                    "title":"Since Adam",
-                    "link":"BibleTimelineProject/SinceAdam.md"
+                    "type": "markdown",
+                    "title": "Bible Timeline Project",
+                    "link": "Bible Timeline Project\/index.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "Since Adam",
+                    "link": "Bible Timeline Project\/SinceAdam.md"
                 }
             ]
         },
         {
-            "type":"folder",
-            "title":"一日一生",
-            "pages":[
+            "type": "folder",
+            "title": "\u4e00\u65e5\u4e00\u751f",
+            "pages": [
                 {
-                    "type":"markdown",
-                    "title":"前言",
-                    "link":"OneDayOneLife/index.md"
+                    "type": "markdown",
+                    "title": "\u524d\u8a00",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/index.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"睦月",
-                    "link":"OneDayOneLife/01.md"
+                    "type": "markdown",
+                    "title": "01. \u4e00\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/01.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"如月",
-                    "link":"OneDayOneLife/02.md"
+                    "type": "markdown",
+                    "title": "02. \u4e8c\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/02.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"弥生",
-                    "link":"OneDayOneLife/03.md"
+                    "type": "markdown",
+                    "title": "03. \u4e09\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/03.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"卯月",
-                    "link":"OneDayOneLife/04.md"
+                    "type": "markdown",
+                    "title": "04. \u56db\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/04.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"皐月",
-                    "link":"OneDayOneLife/05.md"
+                    "type": "markdown",
+                    "title": "05. \u4e94\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/05.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"水無月",
-                    "link":"OneDayOneLife/06.md"
+                    "type": "markdown",
+                    "title": "06. \u516d\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/06.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"文月",
-                    "link":"OneDayOneLife/07.md"
+                    "type": "markdown",
+                    "title": "07. \u4e03\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/07.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"葉月",
-                    "link":"OneDayOneLife/08.md"
+                    "type": "markdown",
+                    "title": "08. \u516b\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/08.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"長月",
-                    "link":"OneDayOneLife/09.md"
+                    "type": "markdown",
+                    "title": "09. \u4e5d\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/09.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"神無月",
-                    "link":"OneDayOneLife/10.md"
+                    "type": "markdown",
+                    "title": "10. \u5341\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/10.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"霜月",
-                    "link":"OneDayOneLife/11.md"
+                    "type": "markdown",
+                    "title": "11. \u5341\u4e00\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/11.md"
                 },
                 {
-                    "type":"markdown",
-                    "title":"師走",
-                    "link":"OneDayOneLife/12.md"
+                    "type": "markdown",
+                    "title": "12. \u5341\u4e8c\u6708",
+                    "link": "\u4e00\u65e5\u4e00\u751f\/12.md"
                 }
             ]
         }

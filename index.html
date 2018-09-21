@@ -43,7 +43,7 @@
                         <h2>Menu</h2>        
                     </div>
                     <div>
-                        <ol style="margin-left:20px;list-style-type: katakana-iroha;">
+                        <ul style="margin-left:20px;">
                             <li v-for="(menu_item,menu_item_index) in menu" :key="menu_item_index">
                                 <template v-if="menu_item.type==='markdown'">
                                     <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</i-button> -->
@@ -54,21 +54,21 @@
                                         <!-- <i-button type="text" @click="switchFolder(menu_item_index)">{{menu_item.title}}</i-button> -->
                                         <a class="menu_item" href="javascript:void(0)" v-on:click="switchFolder(menu_item_index)">{{menu_item.title}}</a>
                                     </div>
-                                    <ol v-show="folder_switch[menu_item_index]" style="margin-left:20px;list-style-type: hiragana-iroha;">
+                                    <ul v-show="folder_switch[menu_item_index]" style="margin-left:20px;">
                                         <li v-for="menu_item_inside in menu_item.pages">
                                             <template v-if="menu_item_inside.type==='markdown'">
                                                 <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item_inside.link)">{{menu_item_inside.title}}</i-button> -->
                                                 <a class="menu_item" href="javascript:void(0)" v-on:click="openMenuItemAsMarkdown(menu_item_inside.link)">{{menu_item_inside.title}}</a>
                                             </template>
                                         </li>
-                                    </ol>
+                                    </ul>
                                 </template>
                                 <template v-else>
                                     <!-- <i-button type="text" >{{menu_item.title}}</i-button> -->
                                     <a class="menu_item" href="javascript:void(0)">{{menu_item.title}}</a>
                                 </template>
                             </li>
-                        </ol>
+                        </ul>
                     </div>   
                 </div>
             </Affix>
