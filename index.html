@@ -137,6 +137,8 @@
                     console.log(response);
                     if(response.status===200){
                         this.markdownContent=response.data;
+
+                        window.history.pushState({},0,"./index.html?openPageLink="+encodeURIComponent(link));
                     }else{
                         alert("Failed to call page!");
                     }
@@ -154,6 +156,23 @@
         mounted() {
             this.loadMenu();
             this.openMenuItemAsMarkdown('welcome.md');
+
+            console.log('window.location.search',window.location.search);
+            if(window.location.search.startsWith("?")){
+                let queryString=window.location.search.substring(1);
+                if(queryString.length>0){
+                    let queries={};
+                    queryString.split("&").forEach((entry)=>{
+                        let pair=entry.split("=");
+                        queries[pair[0]]=pair[1];
+                    })
+                    console.log('queries',queries);
+
+                    if(queries.openPageLink){
+                        this.openMenuItemAsMarkdown(decodeURIComponent(queries.openPageLink));
+                    }
+                }
+            }
         },
     })
   </script>
