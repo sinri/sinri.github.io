@@ -1,4 +1,4 @@
-# Sinri.github.io
+# [Sinri@github.io](https://sinri.github.io)
 
 開発と創作を中心としての個人サイトである。
 
