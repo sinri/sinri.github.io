@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sinri@GitHub</title>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/iview/dist/styles/iview.css">
     <script type="text/javascript" src="https://vuejs.org/js/vue.js"></script>
@@ -32,6 +33,8 @@
         <row style="height: 50px;border-bottom: 1px solid gray;background: white">
             <i-col span="16">
                 <div style="padding-left: 10px">
+                    <i-button v-if="isMobile()" type="info" icon="md-book" @click="mobileMenuSwitch()" style="margin-top: -12px;padding-left: 10px;padding-right: 10px;
+                "></i-button>
                     <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
                     <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
                 </div>
@@ -41,7 +44,49 @@
             </i-col>
         </row>
     </Affix>
-    <row>
+    <template  v-if="isMobile()">
+        <!-- <Affix :offset-top="50" >
+            <row type="flex" justify="space-between" style="padding: 20px;background: white;border-bottom: 1px solid gray">
+                <i-col span="12">
+                    <h2 style="display: inline">Menu</h2>
+                </i-col>
+                <i-col span="12" style="text-align: right">
+                    <i-button type="default" icon="md-book" @click="mobileMenuSwitch()"></i-button>
+                </i-col>
+            </row>
+        </Affix> -->
+        <Modal title="Menu" footer-hide mask-closable v-model="isMobileMenuOpen">
+                <!-- v-if="isMobileMenuOpen" -->
+            <div style="width:100%;height: 60vh;overflow: auto;" >
+                <i-menu accordion width="auto" style="z-index: auto;" @on-select="openMenuItemAsMarkdown">
+                    <template v-for="(menu_item,menu_item_index) in menu">
+                        <template v-if="menu_item.type==='markdown'">
+                            <menu-item :name="menu_item.link">{{menu_item.title}}</menu-item>
+                        </template>
+                        <Submenu v-else-if="menu_item.type==='folder'" :name="menu_item_index" style="z-index: auto;">
+                            <template slot="title">
+                                {{menu_item.title}}
+                            </template>
+                            <template v-for="menu_item_inside in menu_item.pages">
+                                <menu-item v-if="menu_item_inside.type==='markdown'" :name="menu_item_inside.link" style="z-index: auto;">{{menu_item_inside.title}}</menu-item>
+                            </template>
+                        </Submenu>
+                        <template v-else>
+                            <menu-item :name="menu_item.link">{{menu_item.title}}</menu-item>
+                        </template>
+                    </template>
+                </i-menu>
+            </div>
+        </Modal>
+        <row>
+            <i-col span="24">
+                <div :style="{margin: '24px 0',padding: '24px', minHeight: '70vh', background: '#fff'}">
+                    <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
+                </div>
+            </i-col>
+        </row>
+    </template>
+    <row v-else>
         <i-col span="4">
             <Affix :offset-top="50" >
                 <div style="margin:5px 20px 5px 10px;padding: 5px;border:1px solid lightgray;border-radius: 5px;overflow-y: auto;height: 70vh">
@@ -81,7 +126,7 @@
         </i-col>
         <i-col span="20">
             <div :style="{margin: '24px 0',padding: '24px', minHeight: '70vh', background: '#fff'}">
-                <div id="markdown" class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
+                <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
             </div>
         </i-col>
     </row>
@@ -104,7 +149,8 @@
             site_declaration:'',
             menu:[],
             folder_switch:[],
-            markdownContent:''
+            markdownContent:'',
+            isMobileMenuOpen:false,
         },
         computed: {
             compiledMarkdown: function () {
@@ -157,11 +203,26 @@
                 console.log("switchFolder",menu_item_index,this.folder_switch[menu_item_index]);
                 Vue.set(this.folder_switch,menu_item_index, !this.folder_switch[menu_item_index]);
                 //this.folder_switch[menu_item_index]=!this.folder_switch[menu_item_index];
+            },
+            isMobile:function(){
+                //detection PC and Mobile 
+                if(!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/) && !!navigator.userAgent.match(/AppleWebKit/)){ 
+                    //document.writeln('Browser:'+'Mobile Browser'+'<hr>'); 
+                    return true;
+                }else { 
+                    //document.writeln('Browser:'+'Desktop Browser'+'<hr>'); 
+                    return false;
+                }
+            },
+            mobileMenuSwitch:function(){
+                this.isMobileMenuOpen=!this.isMobileMenuOpen;
             }
         },
         mounted() {
             this.loadMenu();
             this.openMenuItemAsMarkdown('welcome.md');
+
+            console.log("isMobile",this.isMobile());
 
             console.log('window.location.search',window.location.search);
             if(window.location.search.startsWith("?")){
