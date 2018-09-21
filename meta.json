@@ -26,6 +26,37 @@
         },
         {
             "type": "folder",
+            "title": "iOS Apps",
+            "pages": [
+                {
+                    "type": "markdown",
+                    "title": "iOS Apps Index",
+                    "link": "iOS Apps\/index.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "ChiGui",
+                    "link": "iOS Apps\/ChiGui.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "Flash Coder",
+                    "link": "iOS Apps\/tenmetsu.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "Sinri Composer",
+                    "link": "iOS Apps\/SinriComposer.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "ZQT Basketball Group Dividing Tool",
+                    "link": "iOS Apps\/ZQTBasuke.md"
+                }
+            ]
+        },
+        {
+            "type": "folder",
             "title": "\u4e00\u65e5\u4e00\u751f",
             "pages": [
                 {
