@@ -132,6 +132,11 @@
             "pages": [
                 {
                     "type": "markdown",
+                    "title": "\u5e8f",
+                    "link": "\u7f85\u99ac\u66f8\u4e4b\u7814\u7a76\/index.md"
+                },
+                {
+                    "type": "markdown",
                     "title": "\u7b2c01\u8b1b \u7f85\u99ac\u66f8\u7684\u5927\u610f",
                     "link": "\u7f85\u99ac\u66f8\u4e4b\u7814\u7a76\/\u7b2c01\u8b1b \u7f85\u99ac\u66f8\u7684\u5927\u610f.md"
                 },
