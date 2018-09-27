@@ -30,15 +30,31 @@
 <body>
 <div id="app">
     <Affix>
-        <row style="height: 50px;border-bottom: 1px solid gray;background: white">
-            <i-col span="16">
-                <div style="padding-left: 10px">
-                    <i-button v-if="isMobile()" type="info" icon="md-book" @click="mobileMenuSwitch()" style="margin-top: -12px;padding-left: 10px;padding-right: 10px;
-                "></i-button>
-                    <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
-                    <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
-                </div>
-            </i-col>
+        <row style="height: 51px;border-bottom: 1px solid gray;background: white">
+            <template v-if="isMobile()">
+                <i-col span="16">
+                    <div style="padding-left: 10px">
+                            <!-- v-if="isMobile()" -->
+                        <i-button type="info" icon="md-book" @click="mobileMenuSwitch()" style="margin-top: -12px;padding-left: 10px;padding-right: 10px;"></i-button>
+                        <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
+                        <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
+                    </div>
+                </i-col>
+            </template>
+            <template v-else>
+                <i-col span="8">
+                    <div style="padding-left: 10px;line-height: 50px;">
+                        <i-button type="info" icon="md-book" @click="mobileMenuSwitch()" style="padding-left: 10px;padding-right: 10px;"></i-button>
+                    </div>
+                </i-col>
+                <i-col span="8">
+                    <div style="padding-left: 10px;text-align: center">
+                            <!-- v-if="isMobile()" -->
+                        <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
+                        <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
+                    </div>
+                </i-col>
+            </template>
             <i-col span="8">
                 <div class="sharethis-inline-share-buttons" style="padding-right: 10px;margin-top:10px;"></div>
             </i-col>
@@ -87,44 +103,37 @@
         </row>
     </template>
     <row v-else>
-        <i-col span="4">
-            <Affix :offset-top="50" >
-                <div style="margin:5px 20px 5px 10px;padding: 5px;border:1px solid lightgray;border-radius: 5px;overflow-y: auto;height: 70vh">
-                    <div>
-                        <h2>Menu</h2>        
-                    </div>
-                    <div>
-                        <ul style="margin-left:20px;">
-                            <li v-for="(menu_item,menu_item_index) in menu" :key="menu_item_index">
-                                <template v-if="menu_item.type==='markdown'">
-                                    <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</i-button> -->
-                                    <a class="menu_item" href="javascript:void(0)" v-on:click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</a>
-                                </template>
-                                <template v-else-if="menu_item.type==='folder'">
-                                    <div>
-                                        <!-- <i-button type="text" @click="switchFolder(menu_item_index)">{{menu_item.title}}</i-button> -->
-                                        <a class="menu_item" href="javascript:void(0)" v-on:click="switchFolder(menu_item_index)">{{menu_item.title}}</a>
-                                    </div>
-                                    <ul v-show="folder_switch[menu_item_index]" style="margin-left:20px;">
-                                        <li v-for="menu_item_inside in menu_item.pages">
-                                            <template v-if="menu_item_inside.type==='markdown'">
-                                                <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item_inside.link)">{{menu_item_inside.title}}</i-button> -->
-                                                <a class="menu_item" href="javascript:void(0)" v-on:click="openMenuItemAsMarkdown(menu_item_inside.link)">{{menu_item_inside.title}}</a>
-                                            </template>
-                                        </li>
-                                    </ul>
-                                </template>
-                                <template v-else>
-                                    <!-- <i-button type="text" >{{menu_item.title}}</i-button> -->
-                                    <a class="menu_item" href="javascript:void(0)">{{menu_item.title}}</a>
-                                </template>
-                            </li>
-                        </ul>
-                    </div>   
-                </div>
-            </Affix>
-        </i-col>
-        <i-col span="20">
+        <Drawer title="Menu" placement="left" :closable="false" v-model="isMobileMenuOpen" scrollable>
+            <div>
+                <ul style="margin-left:20px;">
+                    <li v-for="(menu_item,menu_item_index) in menu" :key="menu_item_index">
+                        <template v-if="menu_item.type==='markdown'">
+                            <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</i-button> -->
+                            <a class="menu_item" href="javascript:void(0)" v-on:click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</a>
+                        </template>
+                        <template v-else-if="menu_item.type==='folder'">
+                            <div>
+                                <!-- <i-button type="text" @click="switchFolder(menu_item_index)">{{menu_item.title}}</i-button> -->
+                                <a class="menu_item" href="javascript:void(0)" v-on:click="switchFolder(menu_item_index)">{{menu_item.title}}</a>
+                            </div>
+                            <ul v-show="folder_switch[menu_item_index]" style="margin-left:20px;">
+                                <li v-for="menu_item_inside in menu_item.pages">
+                                    <template v-if="menu_item_inside.type==='markdown'">
+                                        <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item_inside.link)">{{menu_item_inside.title}}</i-button> -->
+                                        <a class="menu_item" href="javascript:void(0)" v-on:click="openMenuItemAsMarkdown(menu_item_inside.link)">{{menu_item_inside.title}}</a>
+                                    </template>
+                                </li>
+                            </ul>
+                        </template>
+                        <template v-else>
+                            <!-- <i-button type="text" >{{menu_item.title}}</i-button> -->
+                            <a class="menu_item" href="javascript:void(0)">{{menu_item.title}}</a>
+                        </template>
+                    </li>
+                </ul>
+            </div>   
+        </Drawer>
+        <i-col span="24">
             <div :style="{margin: '24px 0',padding: '24px', minHeight: '70vh', background: '#fff'}">
                 <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
             </div>
@@ -191,6 +200,8 @@
                         this.markdownContent=response.data;
 
                         window.history.pushState({},0,"./index.html?openPageLink="+encodeURIComponent(link));
+
+                        this.isMobileMenuOpen=false;
                     }else{
                         alert("Failed to call page!");
                     }
