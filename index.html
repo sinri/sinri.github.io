@@ -29,8 +29,8 @@
 </head>
 <body>
 <div id="app">
-    <Affix>
-        <row style="height: 51px;border-bottom: 1px solid gray;background: white">
+    <!-- <Affix> -->
+        <row style="width:100%;height: 51px;border-bottom: 1px solid gray;background: white;position: fixed;top:0;z-index: 10;">
             <template v-if="isMobile()">
                 <i-col span="16">
                     <div style="padding-left: 10px">
@@ -59,7 +59,8 @@
                 <div class="sharethis-inline-share-buttons" style="padding-right: 10px;margin-top:10px;"></div>
             </i-col>
         </row>
-    </Affix>
+    <!-- </Affix> -->
+    <div style="margin-top:50px;">
     <template  v-if="isMobile()">
         <!-- <Affix :offset-top="50" >
             <row type="flex" justify="space-between" style="padding: 20px;background: white;border-bottom: 1px solid gray">
@@ -134,14 +135,17 @@
             </div>   
         </Drawer>
         <i-col span="24">
-            <div :style="{margin: '24px 0',padding: '24px', minHeight: '70vh', background: '#fff'}">
+            <div :style="{margin: '24px 0',padding: '50px', minHeight: '70vh', background: '#fff'}">
                 <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
             </div>
         </i-col>
     </row>
-    <Affix :offset-bottom="0">
-        <div style="height: 40px;line-height:30px;background:white;border-top: 1px solid lightgray;text-align: center">{{site_declaration}}</div>
-    </Affix>
+    </div>
+    <!-- <Affix :offset-bottom="0"> -->
+    <div style="height: 40px;width:100%;z-index: 10;position: fixed;bottom:0;background:white;border-top: 1px solid lightgray;">
+        <div style="line-height:30px;text-align: center">{{site_declaration}}</div>
+    </div>
+    <!-- </Affix> -->
 </div>
 <script>
     Vue.directive('highlight', function (el) {
