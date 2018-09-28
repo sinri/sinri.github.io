@@ -75,7 +75,8 @@
         <Modal title="Menu" footer-hide mask-closable v-model="isMobileMenuOpen">
                 <!-- v-if="isMobileMenuOpen" -->
             <div style="width:100%;height: 60vh;overflow: auto;" >
-                <i-menu accordion width="auto" style="z-index: auto;" @on-select="openMenuItemAsMarkdown">
+                <i-menu accordion width="auto" style="z-index: auto;">
+                        <!-- @on-select="openMenuItemAsMarkdown" -->
                     <template v-for="(menu_item,menu_item_index) in menu">
                         <template v-if="menu_item.type==='markdown'">
                             <menu-item :name="menu_item.link">{{menu_item.title}}</menu-item>
