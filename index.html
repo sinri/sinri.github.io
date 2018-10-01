@@ -29,54 +29,40 @@
 </head>
 <body>
 <div id="app">
-    <!-- <Affix> -->
-        <row style="width:100%;height: 51px;border-bottom: 1px solid gray;background: white;position: fixed;top:0;z-index: 10;">
-            <template v-if="isMobile()">
-                <i-col span="16">
-                    <div style="padding-left: 10px">
-                            <!-- v-if="isMobile()" -->
-                        <i-button type="info" icon="md-book" @click="mobileMenuSwitch()" style="margin-top: -12px;padding-left: 10px;padding-right: 10px;"></i-button>
-                        <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
-                        <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
-                    </div>
-                </i-col>
-            </template>
-            <template v-else>
-                <i-col span="3">
-                    <div style="padding-left: 10px;line-height: 50px;">
-                        <i-button type="info" icon="md-book" @click="mobileMenuSwitch()" style="padding-left: 10px;padding-right: 10px;"></i-button>
-                    </div>
-                </i-col>
-                <i-col span="18">
-                    <div style="padding-left: 10px;text-align: center">
-                            <!-- v-if="isMobile()" -->
-                        <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
-                        <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
-                    </div>
-                </i-col>
-            </template>
-            <i-col span="3">
-                <div class="sharethis-inline-share-buttons" style="padding-right: 10px;margin-top:10px;"></div>
+    <row style="width:100%;height: 51px;border-bottom: 1px solid gray;background: white;position: fixed;top:0;z-index: 10;">
+        <template v-if="isMobile()">
+            <i-col span="16">
+                <div style="padding-left: 10px">
+                        <!-- v-if="isMobile()" -->
+                    <i-button type="info" icon="md-book" @click="mobileMenuSwitch()" style="margin-top: -12px;padding-left: 10px;padding-right: 10px;"></i-button>
+                    <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
+                    <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
+                </div>
             </i-col>
-        </row>
-    <!-- </Affix> -->
+        </template>
+        <template v-else>
+            <i-col span="3">
+                <div style="padding-left: 10px;line-height: 50px;">
+                    <i-button type="info" icon="md-book" @click="mobileMenuSwitch()" style="padding-left: 10px;padding-right: 10px;"></i-button>
+                </div>
+            </i-col>
+            <i-col span="18">
+                <div style="padding-left: 10px;text-align: center">
+                        <!-- v-if="isMobile()" -->
+                    <Avatar style="margin-top: -12px;" :src="avatar"></Avatar>
+                    <h1 style="line-height: 50px;display: inline">Sinri@GitHub</h1>
+                </div>
+            </i-col>
+        </template>
+        <i-col span="3">
+            <div class="sharethis-inline-share-buttons" style="padding-right: 10px;margin-top:10px;"></div>
+        </i-col>
+    </row>
     <div style="margin-top:50px;">
     <template  v-if="isMobile()">
-        <!-- <Affix :offset-top="50" >
-            <row type="flex" justify="space-between" style="padding: 20px;background: white;border-bottom: 1px solid gray">
-                <i-col span="12">
-                    <h2 style="display: inline">Menu</h2>
-                </i-col>
-                <i-col span="12" style="text-align: right">
-                    <i-button type="default" icon="md-book" @click="mobileMenuSwitch()"></i-button>
-                </i-col>
-            </row>
-        </Affix> -->
         <Modal title="Menu" footer-hide mask-closable v-model="isMobileMenuOpen">
-                <!-- v-if="isMobileMenuOpen" -->
             <div style="width:100%;height: 60vh;overflow: auto;" >
-                <i-menu accordion width="auto" style="z-index: auto;">
-                        <!-- @on-select="openMenuItemAsMarkdown" -->
+                <i-menu accordion width="auto" style="z-index: auto;" @on-select="openMenuItemAsMarkdown">
                     <template v-for="(menu_item,menu_item_index) in menu">
                         <template v-if="menu_item.type==='markdown'">
                             <menu-item :name="menu_item.link">{{menu_item.title}}</menu-item>
@@ -110,12 +96,10 @@
                 <ul style="margin-left:20px;">
                     <li v-for="(menu_item,menu_item_index) in menu" :key="menu_item_index">
                         <template v-if="menu_item.type==='markdown'">
-                            <!-- <i-button type="text" @click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</i-button> -->
                             <a class="menu_item" href="javascript:void(0)" v-on:click="openMenuItemAsMarkdown(menu_item.link)">{{menu_item.title}}</a>
                         </template>
                         <template v-else-if="menu_item.type==='folder'">
                             <div>
-                                <!-- <i-button type="text" @click="switchFolder(menu_item_index)">{{menu_item.title}}</i-button> -->
                                 <a class="menu_item" href="javascript:void(0)" v-on:click="switchFolder(menu_item_index)">{{menu_item.title}}</a>
                             </div>
                             <ul v-show="folder_switch[menu_item_index]" style="margin-left:20px;">
@@ -128,7 +112,6 @@
                             </ul>
                         </template>
                         <template v-else>
-                            <!-- <i-button type="text" >{{menu_item.title}}</i-button> -->
                             <a class="menu_item" href="javascript:void(0)">{{menu_item.title}}</a>
                         </template>
                     </li>
@@ -142,11 +125,9 @@
         </i-col>
     </row>
     </div>
-    <!-- <Affix :offset-bottom="0"> -->
     <div style="height: 40px;width:100%;z-index: 10;position: fixed;bottom:0;background:white;border-top: 1px solid lightgray;">
         <div style="line-height:30px;text-align: center">{{site_declaration}}</div>
     </div>
-    <!-- </Affix> -->
 </div>
 <script>
     Vue.directive('highlight', function (el) {
