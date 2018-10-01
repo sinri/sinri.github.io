@@ -87,7 +87,7 @@
                 <div style="border-bottom: 1px solid gray;padding: 10px;height: 40px;" v-if="in_dir!==''">
                     <h3 style="text-align: center">~ {{in_dir}} ~</h3>
                 </div>
-                <div :style="{margin: '24px 0',padding: '0 24px', minHeight: '70vh', background: '#fff'}">
+                <div :style="{margin: '24px 0 64px 0',padding: '0 24px', minHeight: '70vh', background: '#fff'}">
                     <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
                 </div>
             </i-col>
@@ -125,7 +125,7 @@
             <div style="border-bottom: 1px solid gray;padding: 10px;height: 40px;" v-if="in_dir!==''">
                 <h3 style="text-align: center">~ {{in_dir}} ~</h3>
             </div>
-            <div :style="{margin: '24px 0',padding: '0 50px', minHeight: '70vh', background: '#fff'}">
+            <div :style="{margin: '24px 0 64px 0',padding: '0 50px', minHeight: '70vh', background: '#fff'}">
                 <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
             </div>
         </i-col>
