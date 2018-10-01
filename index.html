@@ -84,7 +84,10 @@
         </Modal>
         <row>
             <i-col span="24">
-                <div :style="{margin: '24px 0',padding: '24px', minHeight: '70vh', background: '#fff'}">
+                <div style="border-bottom: 1px solid gray;padding: 10px;height: 40px;" v-if="in_dir!==''">
+                    <h3 style="text-align: center">~ {{in_dir}} ~</h3>
+                </div>
+                <div :style="{margin: '24px 0',padding: '0 24px', minHeight: '70vh', background: '#fff'}">
                     <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
                 </div>
             </i-col>
@@ -119,7 +122,10 @@
             </div>   
         </Drawer>
         <i-col span="24">
-            <div :style="{margin: '24px 0',padding: '50px', minHeight: '70vh', background: '#fff'}">
+            <div style="border-bottom: 1px solid gray;padding: 10px;height: 40px;" v-if="in_dir!==''">
+                <h3 style="text-align: center">~ {{in_dir}} ~</h3>
+            </div>
+            <div :style="{margin: '24px 0',padding: '0 50px', minHeight: '70vh', background: '#fff'}">
                 <div class="markdown-body" v-html="compiledMarkdown" v-highlight></div>
             </div>
         </i-col>
@@ -146,6 +152,7 @@
             folder_switch:[],
             markdownContent:'',
             isMobileMenuOpen:false,
+            in_dir:"",
         },
         computed: {
             compiledMarkdown: function () {
@@ -179,6 +186,13 @@
                 });
             },
             openMenuItemAsMarkdown:function(link){
+                let parts=link.split("/");
+                console.log("debug link",link,parts);
+                if(parts.length>1){
+                    this.in_dir=parts[0];
+                }else{
+                    this.in_dir="";
+                }
                 axios.get('./data/'+link)
                 .then(response=>{
                     console.log(response);
