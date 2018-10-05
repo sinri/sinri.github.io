@@ -94,7 +94,7 @@
         </row>
     </template>
     <row v-else>
-        <Drawer title="Menu" placement="left" :closable="false" v-model="isMobileMenuOpen" scrollable>
+        <Drawer title="Menu" placement="left" :closable="false" v-model="isMobileMenuOpen" scrollable :width="40">
             <div>
                 <ul style="margin-left:20px;">
                     <li v-for="(menu_item,menu_item_index) in menu" :key="menu_item_index">
