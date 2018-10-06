@@ -1,0 +1,7 @@
+a.menu_item{
+    margin:5px;
+}
+a.menu_item:link    {color:#515a6e;}
+a.menu_item:visited {color:blue;}
+a.menu_item:hover   {color:#515a6e;text-decoration: underline;}
+a.menu_item:active  {color:yellow;}
