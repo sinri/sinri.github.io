@@ -6,12 +6,12 @@
         {
             "label": "createMetaJson",
             "type": "shell",
-            "command": "php bin/MetaBuilder.php"
+            "command": "cd bin;php MetaBuilder.php"
         },
         {
             "label": "commitAndPush",
             "type": "shell",
-            "command": "bin/update.sh"
+            "command": "cd bin;./update.sh"
         }
     ]
 }
