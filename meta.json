@@ -37,6 +37,11 @@
                     "type": "markdown",
                     "title": "2018.10.02 Hymn XB312",
                     "link": "Diary\/20181002.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "2018.10.16 \u4e3a\u9cb5\u7684\u6559\u4f1a\u8bba",
+                    "link": "Diary\/20181016.md"
                 }
             ]
         },
@@ -153,33 +158,33 @@
                 },
                 {
                     "type": "markdown",
-                    "title": "\u7b2c\u4e00\u7ae0 \u611b\u3059\u308b\u3082\u306e\u306e\u5931\u305b\u3057\u6642",
+                    "title": "\u7b2c1\u7ae0 \u611b\u3059\u308b\u3082\u306e\u306e\u5931\u305b\u3057\u6642",
                     "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c01\u7ae0 \u611b\u3059\u308b\u3082\u306e\u306e\u5931\u305b\u3057\u6642.md"
                 },
                 {
                     "type": "markdown",
-                    "title": "\u7b2c\u4e09\u7ae0 \u57fa\u7763\u6559\u4f1a\u306b\u6368\u3066\u3089\u308c\u3057\u6642",
-                    "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c03\u7ae0 \u57fa\u7763\u6559\u4f1a\u306b\u6368\u3066\u3089\u308c\u3057\u6642.md"
-                },
-                {
-                    "type": "markdown",
-                    "title": "\u7b2c\u4e8c\u7ae0 \u56fd\u4eba\u306b\u6368\u3066\u3089\u308c\u3057\u6642",
+                    "title": "\u7b2c2\u7ae0 \u56fd\u4eba\u306b\u6368\u3066\u3089\u308c\u3057\u6642",
                     "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c02\u7ae0 \u56fd\u4eba\u306b\u6368\u3066\u3089\u308c\u3057\u6642.md"
                 },
                 {
                     "type": "markdown",
-                    "title": "\u7b2c\u4e94\u7ae0 \u8ca7\u306b\u8feb\u308a\u3057\u6642",
+                    "title": "\u7b2c3\u7ae0 \u57fa\u7763\u6559\u4f1a\u306b\u6368\u3066\u3089\u308c\u3057\u6642",
+                    "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c03\u7ae0 \u57fa\u7763\u6559\u4f1a\u306b\u6368\u3066\u3089\u308c\u3057\u6642.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "\u7b2c4\u7ae0 \u4e8b\u696d\u306b\u5931\u6557\u305b\u3057\u6642",
+                    "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c04\u7ae0 \u4e8b\u696d\u306b\u5931\u6557\u305b\u3057\u6642.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "\u7b2c5\u7ae0 \u8ca7\u306b\u8feb\u308a\u3057\u6642",
                     "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c05\u7ae0 \u8ca7\u306b\u8feb\u308a\u3057\u6642.md"
                 },
                 {
                     "type": "markdown",
-                    "title": "\u7b2c\u516d\u7ae0 \u4e0d\u6cbb\u306e\u75c5\u306b\u7f79\u308a\u3057\u6642",
+                    "title": "\u7b2c6\u7ae0 \u4e0d\u6cbb\u306e\u75c5\u306b\u7f79\u308a\u3057\u6642",
                     "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c06\u7ae0 \u4e0d\u6cbb\u306e\u75c5\u306b\u7f79\u308a\u3057\u6642.md"
-                },
-                {
-                    "type": "markdown",
-                    "title": "\u7b2c\u56db\u7ae0 \u4e8b\u696d\u306b\u5931\u6557\u305b\u3057\u6642",
-                    "link": "\u57fa\u7763\u4fe1\u5f92\u306e\u306a\u304f\u3099\u3055\u3081\/\u7b2c04\u7ae0 \u4e8b\u696d\u306b\u5931\u6557\u305b\u3057\u6642.md"
                 }
             ]
         },
@@ -737,6 +742,17 @@
                     "type": "markdown",
                     "title": "\u7b2c16\u8b1b \u5f8b\u6cd5\u7684\u80fd\u529b",
                     "link": "\u7f85\u99ac\u66f8\u4e4b\u7814\u7a76\/\u7b2c16\u8b1b \u5f8b\u6cd5\u7684\u80fd\u529b.md"
+                }
+            ]
+        },
+        {
+            "type": "folder",
+            "title": "\u85e4\u4e95\u6b66",
+            "pages": [
+                {
+                    "type": "markdown",
+                    "title": "\u6559\u4f1a\u8ad6",
+                    "link": "\u85e4\u4e95\u6b66\/\u6559\u4f1a\u8ad6.md"
                 }
             ]
         }
