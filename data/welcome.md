@@ -11,7 +11,8 @@
 
 ## Special Library
 
-* The library of [Watchman Nee](./WatchmanNee/).
+* [Library of Watchman Nee](./WatchmanNee/)
+* [Sermons of Tetsusaburo Sasao](./TetsusaburoSasao/)
 
 ## コンテンツについて
 
