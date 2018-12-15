@@ -1,0 +1,32 @@
+{
+    "avatar": "https:\/\/sinri.cc\/frontend\/static\/img\/AlipayUkanokan258.png",
+    "site_title": "Welcome thou vistor!",
+    "site_declaration": "Powered by and all right reserved to, Copyright 2018 Sinri Edogawa",
+    "menu": [
+        {
+            "type": "markdown",
+            "title": "\u85e4\u4e95\u6b66",
+            "link": "welcome.md"
+        },
+        {
+            "type": "markdown",
+            "title": "\u30a8\u30af\u30ec\u30b7\u30e4\uff08\u6559\u4f1a\uff09\u306e\u7814\u7a76",
+            "link": "\u30a8\u30af\u30ec\u30b7\u30e4\u306e\u7814\u7a76.md"
+        },
+        {
+            "type": "markdown",
+            "title": "\u4e16\u3068\u305d\u306e\u6b32",
+            "link": "\u4e16\u3068\u305d\u306e\u6b32.md"
+        },
+        {
+            "type": "markdown",
+            "title": "\u6559\u4f1a\u306e\u4fd7\u5316",
+            "link": "\u6559\u4f1a\u306e\u4fd7\u5316.md"
+        },
+        {
+            "type": "markdown",
+            "title": "\u6559\u4f1a\u8ad6",
+            "link": "\u6559\u4f1a\u8ad6.md"
+        }
+    ]
+}

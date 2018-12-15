@@ -11,7 +11,8 @@
         {
             "label": "commitAndPush",
             "type": "shell",
-            "command": "cd bin;./update.sh"
+            "command": "cd bin;./update.sh",
+            "problemMatcher": []
         }
     ]
 }
