@@ -13,6 +13,7 @@
 
 * [Library of Watchman Nee](./WatchmanNee/)
 * [Sermons of Tetsusaburo Sasao](./TetsusaburoSasao/)
+* [Library of Kanzou Uchimura](./UchimuraKanzou/)
 
 ## コンテンツについて
 
