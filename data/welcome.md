@@ -14,6 +14,7 @@
 * [Library of Watchman Nee](./WatchmanNee/)
 * [Sermons of Tetsusaburo Sasao](./TetsusaburoSasao/)
 * [Library of Kanzou Uchimura](./UchimuraKanzou/)
+* [Library of Takeshi Fujii](./TakeshiFujii/)
 
 ## コンテンツについて
 
