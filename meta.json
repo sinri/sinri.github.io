@@ -26,6 +26,22 @@
         },
         {
             "type": "folder",
+            "title": "Creeds",
+            "pages": [
+                {
+                    "type": "markdown",
+                    "title": "\u4f7f\u5f92\u4fe1\u7d93",
+                    "link": "Creeds\/ApostlesCreed.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "\u6bd4\u5229\u6642\u4fe1\u689d",
+                    "link": "Creeds\/TheBelgicConfession.md"
+                }
+            ]
+        },
+        {
+            "type": "folder",
             "title": "Diary",
             "pages": [
                 {
