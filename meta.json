@@ -30,13 +30,28 @@
             "pages": [
                 {
                     "type": "markdown",
+                    "title": "\u4e9a\u4ed6\u90a3\u4fee\u4fe1\u7ecf",
+                    "link": "Creeds\/AthanasianCreed.md"
+                },
+                {
+                    "type": "markdown",
                     "title": "\u4f7f\u5f92\u4fe1\u7d93",
                     "link": "Creeds\/ApostlesCreed.md"
                 },
                 {
                     "type": "markdown",
+                    "title": "\u5c3c\u897f\u4e9a\u4fe1\u7ecf",
+                    "link": "Creeds\/NiceneCreed.md"
+                },
+                {
+                    "type": "markdown",
                     "title": "\u6bd4\u5229\u6642\u4fe1\u689d",
                     "link": "Creeds\/TheBelgicConfession.md"
+                },
+                {
+                    "type": "markdown",
+                    "title": "\u8fe6\u514b\u6566\u4fe1\u7ecf",
+                    "link": "Creeds\/ChalcedonianCreed.md"
                 }
             ]
         },
