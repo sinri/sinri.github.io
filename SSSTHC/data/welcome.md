@@ -6,6 +6,8 @@ Sunday School Support Textbook based on the Heidelberg Catechism
 
 《海德堡教理问答》是三项联合信条中的一项，是改革宗的教义问答文书，其中有一连串的问题及答案，在教授加尔文主义基督教教义时使用。海德堡教义问答是1563年在海德堡（位在现今的德国），原名为《教义问答或根据教会习俗及普法尔茨学校的基督教指南》。此教义问答是由普法尔茨选帝侯弗里德里希三世的委托下才产生，被翻译为多种语言版本，是加尔文宗最有影响力的教义问答之一。[来源：维基百科](https://zh.wikipedia.org/wiki/%E6%B5%B7%E5%BE%B7%E5%A0%A1%E8%A6%81%E7%90%86%E5%95%8F%E7%AD%94)
 
+[Source Text Reference](https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism)
+
 ## 为什么妄图编这份教材
 
 > 说：‘这个人开了工，却不能完工。’ (路加福音 14:30 )
