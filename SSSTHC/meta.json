@@ -1,0 +1,12 @@
+{
+    "avatar": "https:\/\/sinri.cc\/frontend\/static\/img\/AlipayUkanokan258.png",
+    "site_title": "Welcome thou vistor!",
+    "site_declaration": "Powered by and all right reserved to, Copyright 2018 Sinri Edogawa",
+    "menu": [
+        {
+            "type": "markdown",
+            "title": "\u6d77\u5fb7\u5821\u5f0f\u4e3b\u65e5\u5b66\u8f85\u52a9\u6559\u6750",
+            "link": "welcome.md"
+        }
+    ]
+}
