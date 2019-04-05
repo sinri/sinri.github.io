@@ -15,6 +15,7 @@
 * [Sermons of Tetsusaburo Sasao](./TetsusaburoSasao/)
 * [Library of Kanzou Uchimura](./UchimuraKanzou/)
 * [Library of Takeshi Fujii](./TakeshiFujii/)
+* [Project of Sunday School Support Textbook based on the Heidelberg Catechism](./SSSTHC/)
 
 ## コンテンツについて
 
