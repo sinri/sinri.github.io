@@ -11,6 +11,7 @@
 
 ## Special Library
 
+* [Creeds and Catechisms](https://sinri.github.io/CreedsAndCatechisms/)
 * [Library of Watchman Nee](./WatchmanNee/)
 * [Sermons of Tetsusaburo Sasao](./TetsusaburoSasao/)
 * [Library of Kanzou Uchimura](./UchimuraKanzou/)
