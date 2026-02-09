@@ -1,15 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>{{ page.title }}</title>
     <link rel="stylesheet" href="/assets/css/styles.css">
     {% feed_meta %}
     {% seo %}
 </head>
 <body>
-    {% include navigation.html %}
-    {{ content }}
+    <!-- 顶部导航 -->
+    <header class="site-header">
+        <div class="header-container">
+            <button class="mobile-menu-toggle" aria-label="切换菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <button class="toc-toggle" aria-label="切换目录">⚓</button>
+            {% include navigation.html %}
+        </div>
+    </header>
+
+    <!-- 主容器 -->
+    <div class="site-container">
+        <!-- 主内容区 -->
+        <main class="main-content">
+            <div class="content-wrapper">
+                {{ content }}
+            </div>
+        </main>
+
+        <!-- 侧边栏目录（右侧） -->
+        <aside class="toc-sidebar" id="tocSidebar">
+            <div class="toc-wrapper">
+                <div class="toc-header">
+                    <h3 class="toc-title">目录</h3>
+                    <button class="toc-collapse-btn" id="tocCollapseBtn" aria-label="收起目录">
+                        <span class="collapse-icon">»</span>
+                    </button>
+                </div>
+                <nav id="toc" class="toc-nav"></nav>
+            </div>
+            <div class="toc-collapsed-indicator">目录</div>
+        </aside>
+    </div>
+
+    <!-- JavaScript 生成动态目录 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 生成目录
+            const content = document.querySelector('.content-wrapper');
+            const toc = document.getElementById('toc');
+            const headings = content.querySelectorAll('h1, h2, h3, h4, h5, h6');
+            
+            if (headings.length > 0) {
+                const tocList = document.createElement('ul');
+                tocList.className = 'toc-list';
+                
+                headings.forEach((heading, index) => {
+                    // 为标题添加 ID
+                    if (!heading.id) {
+                        heading.id = 'heading-' + index;
+                    }
+                    
+                    const level = parseInt(heading.tagName.substring(1));
+                    const listItem = document.createElement('li');
+                    listItem.className = 'toc-item toc-level-' + level;
+                    
+                    const link = document.createElement('a');
+                    link.href = '#' + heading.id;
+                    link.textContent = heading.textContent;
+                    link.className = 'toc-link';
+                    
+                    // 平滑滚动
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        heading.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // 更新 URL
+                        history.pushState(null, null, '#' + heading.id);
+                        // 移动端自动关闭目录
+                        if (window.innerWidth <= 768) {
+                            document.getElementById('tocSidebar').classList.remove('mobile-active');
+                        }
+                    });
+                    
+                    listItem.appendChild(link);
+                    tocList.appendChild(listItem);
+                });
+                
+                toc.appendChild(tocList);
+                
+                // 滚动高亮当前目录项
+                let activeLink = null;
+                window.addEventListener('scroll', function() {
+                    let current = '';
+                    headings.forEach(heading => {
+                        const sectionTop = heading.offsetTop;
+                        if (window.pageYOffset >= sectionTop - 100) {
+                            current = heading.id;
+                        }
+                    });
+                    
+                    const links = toc.querySelectorAll('.toc-link');
+                    links.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === '#' + current) {
+                            link.classList.add('active');
+                            activeLink = link;
+                        }
+                    });
+                });
+            } else {
+                // 没有标题时隐藏目录
+                document.getElementById('tocSidebar').style.display = 'none';
+            }
+            
+            // 移动端菜单切换
+            const menuToggle = document.querySelector('.mobile-menu-toggle');
+            const nav = document.querySelector('nav');
+            if (menuToggle) {
+                menuToggle.addEventListener('click', function() {
+                    nav.classList.toggle('active');
+                });
+            }
+            
+            // 移动端目录切换
+            const tocToggle = document.querySelector('.toc-toggle');
+            const tocSidebar = document.getElementById('tocSidebar');
+            if (tocToggle) {
+                tocToggle.addEventListener('click', function() {
+                    tocSidebar.classList.toggle('mobile-active');
+                });
+            }
+            
+            // PC端目录收起/展开
+            const tocCollapseBtn = document.getElementById('tocCollapseBtn');
+            if (tocCollapseBtn) {
+                tocCollapseBtn.addEventListener('click', function() {
+                    tocSidebar.classList.toggle('collapsed');
+                    const icon = this.querySelector('.collapse-icon');
+                    if (tocSidebar.classList.contains('collapsed')) {
+                        icon.textContent = '«';
+                        this.setAttribute('aria-label', '展开目录');
+                    } else {
+                        icon.textContent = '»';
+                        this.setAttribute('aria-label', '收起目录');
+                    }
+                });
+            }
+            
+            // 点击外部关闭菜单
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.site-header') && !e.target.closest('.toc-sidebar')) {
+                    nav.classList.remove('active');
+                    tocSidebar.classList.remove('mobile-active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

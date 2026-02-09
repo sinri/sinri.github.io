@@ -2,11 +2,13 @@ title: sinri.github.io
 description: The publications by Sinri Edogawa on GitHub Pages
 url: https://sinri.github.io
 baseurl: ""
-theme: jekyll-theme-leap-day
+# theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-optional-front-matter
+  - jekyll-relative-links
 markdown: kramdown
 kramdown:
   input: GFM
