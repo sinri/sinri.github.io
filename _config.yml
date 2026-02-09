@@ -2,7 +2,7 @@ title: sinri.github.io
 description: GitHub Pages
 url: https://sinri.github.io
 baseurl: ""
-theme: minima
+theme: leap-day
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
