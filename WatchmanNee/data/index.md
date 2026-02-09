@@ -1,3 +1,8 @@
+---
+layout: default
+title: 倪柝声全集
+---
+
 # 倪柝声全集
 
 The Total Documents of Watchman Nee
