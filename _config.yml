@@ -4,9 +4,9 @@ url: https://sinri.github.io
 baseurl: ""
 theme: jekyll-theme-leap-day
 plugins:
-  #- jekyll-remote-theme 
   - jekyll-feed
   - jekyll-seo-tag
+  - jekyll-optional-front-matter
 markdown: kramdown
 kramdown:
   input: GFM
