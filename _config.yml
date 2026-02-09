@@ -2,9 +2,9 @@ title: sinri.github.io
 description: GitHub Pages
 url: https://sinri.github.io
 baseurl: ""
-remote_theme: pages-themes/leap-day@v0.2.0
+theme: jekyll-theme-leap-day
 plugins:
-  - jekyll-remote-theme 
+  #- jekyll-remote-theme 
   - jekyll-feed
   - jekyll-seo-tag
 markdown: kramdown
