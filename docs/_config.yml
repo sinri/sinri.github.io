@@ -2,6 +2,7 @@ title: sinri.github.io
 description: The publications by Sinri Edogawa on GitHub Pages
 url: https://sinri.github.io
 baseurl: ""
+encoding: utf-8
 # theme: jekyll-theme-leap-day
 plugins:
   - jekyll-feed
