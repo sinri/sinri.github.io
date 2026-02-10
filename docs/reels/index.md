@@ -2,7 +2,10 @@
 
 基本上都是些上古的卷轴。
 
+* [Creeds](./Creeds/index.md) 信条
 * [Watchman Nee](./WatchmanNee/index.md) 倪 柝声 （全集）
 * [Uchimura Kanzou](./UchimuraKanzou/index.md) 内村 鑑三
 * [Sasao Tetsusaburo](./SasaoTetsusaburo/index.md) 笹尾 鉄三郎
 * [Takeshi Fujii](./TakeshiFujii/index.md) 藤井 武
+* [Heidelberg Catechism](./SSSTHC/index.md) 海德堡式主日学辅助教材
+* [Bible Timeline Project](./BibleTimelineProject/index.md) 圣经时间线研究

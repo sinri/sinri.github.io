@@ -1,0 +1,169 @@
+---
+layout: post
+author: sinri
+title: "如何将自己的开源Java项目的Jar包放到Maven Center库中"
+date: 2019-04-13
+excerpt: "在开源Java项目完成可以发布之后，可能会考虑共享Jar包到Maven Center库中。"
+---
+
+# 2019.04.13 如何将自己的开源Java项目的Jar包放到Maven Center库中
+
+在开源Java项目完成可以发布之后，可能会考虑共享Jar包到Maven Center库中。
+如果从来没有过发布经验，可以按照这个步骤进行。
+
+1. 准备GPG
+2. 注册Sonatype账号
+3. 发起工单
+4. 准备Maven和POM
+5. 运行mvn的deploy命令
+6. 回复工单，等待开始同步
+7. 等到工单回复
+
+接下来细细分解。
+
+## 准备GPG
+
+怎么准备GPG这个可以从GitHub之类的地方学到，Mac的话可以直接用 GPGTools 搞定。
+
+用到的GPG需要上传到服务器上。
+
+## 注册Sonatype账号
+
+打开[Sonatype的Issue区](https://issues.sonatype.org/)并注册一个账号。
+
+密码复杂度是有要求的。
+
+## 发起工单
+
+在Sonatype的Issue区发起工单。
+
+Project 选 Community Support - Open Source Project Repository Hosting 。
+
+Type 选 New Project 。
+
+然后 Group Id, Project URL, SCM url, Username 之类的如实填写。
+
+递交工单，等待批准。
+
+需要注意的点是 Group Id ，据说会有要求确认所有权的环节。
+我用了`io.github.XXX`的形式就直接通过了。
+
+## 准备Maven和POM
+
+Sonatype的Snapshot倒是没有那么多规矩，只要在Maven的Settings文件里配置好servers，然后在POM里面登记好distributionManagement的内容就可以跑deploy去了。
+
+```xml
+<distributionManagement>
+    <repository>
+        <id>oss-sonatype-staging</id>
+        <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+    </repository>
+    <snapshotRepository>
+        <id>oss-sonatype-snapshots</id>
+        <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+    </snapshotRepository>
+</distributionManagement>
+```
+
+这里的repository id需要和Maven Settings里描述的server id一致，
+server对应的用户名和密码为注册的Sonatype账号的用户名和密码。
+
+不过这个不是最终的目的，要做release的话还是要填完整。
+一个开源包要发布到Maven中央库的话，需要提供二进制的Jar包、源代码的Jar包以及JavaDoc的Jar包。
+同时，这些Jar包需要经过GPG的签名。
+另外，POM中也需要填写完整各种项目信息。
+总之，这些事情如果不办妥，后面自然是会报错的。
+
+通常，pom可以将这些工作按照目的分成两个profile，其中一个profile用于日常开发和snapshot的更新，另一个则作为release。
+对于release的build，需要`maven-source-plugin`, `maven-javadoc-plugin`, `maven-gpg-plugin`, `nexus-staging-maven-plugin`。
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-source-plugin</artifactId>
+    <version>3.0.1</version>
+    <executions>
+        <execution>
+            <id>attach-sources</id>
+            <goals>
+                <goal>jar-no-fork</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-javadoc-plugin</artifactId>
+    <version>3.1.0</version>
+    <executions>
+        <execution>
+            <id>attach-javadocs</id>
+            <goals>
+                <goal>jar</goal>
+            </goals>
+        </execution>
+    </executions>
+    <configuration>
+        <aggregate>true</aggregate>
+    </configuration>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-gpg-plugin</artifactId>
+    <version>1.6</version>
+    <executions>
+        <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+                <goal>sign</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+<plugin>
+    <groupId>org.sonatype.plugins</groupId>
+    <artifactId>nexus-staging-maven-plugin</artifactId>
+    <version>1.6.8</version>
+    <extensions>true</extensions>
+    <configuration>
+        <serverId>oss-sonatype-staging</serverId>
+        <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+        <autoReleaseAfterClose>true</autoReleaseAfterClose>
+    </configuration>
+</plugin>
+```
+
+## 运行mvn的deploy命令
+
+在发布前，需要确保POM里面的version已经改正确了。
+
+首先需要准备好 `JAVA_HOME` ，因为javadoc命令会用到。
+对于 Mac OS X，你可以用 `/usr/libexec/java_home` 来找默认的JDK的HOME值。
+
+对于类似 `6.0-SNAPSHOT` 的开发版本更新，可以使用 `mvn clean package deploy -P snapshot` 。
+当然，你愿意用release的标准发布SHAPSHOT也并没有问题。
+
+对于正式的版本公布，可以使用 `mvn clean package deploy -P release` 。
+
+跑成功release版的 deploy 命令之后，可以打开 [Sonatype开源仓库Nexus](https://oss.sonatype.org/) ，
+在 Staging Repositories 中寻找自己上传的版本。
+如果发现自己的版本仍然处于open状态没有自动close，则可以手动点击Close，触发close过程；
+成功后状态变成close然后会从列表中消失。
+在close过程中，如果有报错则会进行提示。修复后，需要用新的版本号进行重新发布。
+
+## 回复工单，等待开始同步
+
+新项目首次close成功，需要回复工单表示自己已经成功。然后等传说中的确认入库回复。
+
+## 等到工单回复
+
+类似这样的回复：
+
+> Central sync is activated for io.github.XXX. After you successfully release, your component will be published to Central, typically within 10 minutes, though updates to search.maven.org can take up to two hours.
+
+等一段时候就可以去中央库查了。
+
+---
+
+比起Packagist来还是有一定的复杂度的，绕弯子也多；当然毕竟是严谨的Java，老老实实办事总能弄好的。

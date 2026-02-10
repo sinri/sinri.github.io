@@ -26,6 +26,9 @@ defaults:
       path: ""
     values:
       layout: "default"
-
+relative_links:
+  enabled: true
+  include: ["reels"]
+  exclude: ["iOS","StrongDict"]
 
 # Rerun `bundle exec jekyll serve --livereload` after mofifying this file.
