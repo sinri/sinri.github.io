@@ -1,10 +1,8 @@
-# Sinri's Reels
+# 大鲵的卷轴
 
-Based on Jekyll, on GitHub Pages, this site is used to host my reels.
+基本上都是些上古的卷轴。
 
-## Reels
-
-* [Watchman Nee](./WatchmanNee/index.md)
-* [Uchimura Kanzou](./UchimuraKanzou/index.md)
-* [Sasao Tetsusaburo](./SasaoTetsusaburo/index.md)
-* [Takeshi Fujii](./TakeshiFujii/index.md)
+* [Watchman Nee](./WatchmanNee/index.md) 倪 柝声 （全集）
+* [Uchimura Kanzou](./UchimuraKanzou/index.md) 内村 鑑三
+* [Sasao Tetsusaburo](./SasaoTetsusaburo/index.md) 笹尾 鉄三郎
+* [Takeshi Fujii](./TakeshiFujii/index.md) 藤井 武

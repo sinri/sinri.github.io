@@ -3,4 +3,4 @@ layout: default
 title: Home
 ---
 
-* [Reels](./reels/index.md)
+* [卷轴](./reels/index.md)

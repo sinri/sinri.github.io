@@ -25,3 +25,6 @@ defaults:
       path: ""
     values:
       layout: "default"
+
+
+# Rerun `bundle exec jekyll serve --livereload` after mofifying this file.
