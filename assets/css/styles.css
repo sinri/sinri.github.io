@@ -32,6 +32,18 @@ body {
     gap: 1rem;
 }
 
+.site-title {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+.site-title:hover {
+    text-decoration: underline;
+}
+
 .site-header nav {
     display: flex;
     align-items: center;
@@ -436,6 +448,14 @@ body {
     /* 目录按钮靠右 */
     .header-container {
         justify-content: space-between;
+    }
+
+    .site-title {
+        flex: 1;
+        min-width: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     
     .toc-toggle {
