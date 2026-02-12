@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "比珥的儿子巴兰"
 date: 2016-09-23
-excerpt: "Balaam the son of Beor"
+excerpt: "巴蘭：貪愛工價的先知、驢開口責備；神藉仇敵求咒詛卻傳祝福，神使仇敵計謀歸於無有。"
 ---
 
 # 比珥的儿子巴兰

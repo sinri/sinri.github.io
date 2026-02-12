@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "祭司和利未人"
 date: 2016-06-18
-excerpt: "holy staff"
+excerpt: "祭司和利未人：歸我作祭司國度、以弗得胸牌外袍冠冕、烏陵土明、先潔淨後成聖。"
 ---
 
 # 祭司和利未人

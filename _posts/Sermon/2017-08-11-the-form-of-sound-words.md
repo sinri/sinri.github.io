@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "纯正话语的规模"
 date: 2017-08-11
-excerpt: "the form of sound words"
+excerpt: "純正話語的規模：守住聖經啟示，非拉鐵非得敞開之門，忍耐持守，不固步自封。"
 ---
 
 # 纯正话语的规模

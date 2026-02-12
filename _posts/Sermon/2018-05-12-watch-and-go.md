@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "所望所往"
 date: 2018-05-12
-excerpt: "watch-and-go"
+excerpt: "尼波山上摩西远望应许之地，论信与望：因信得盼望，因盼望付代价，今日我们当望基督荣耀。"
 ---
 
 # 所望所往

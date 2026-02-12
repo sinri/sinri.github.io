@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "耶和华和基甸的刀"
 date: 2016-12-02
-excerpt: "Sword of the LORD and of Gideon"
+excerpt: "耶和華和基甸的刀：士師記七章訓詁，為耶和華為基甸；基甸酒榨打麥、羊毛徵兆，信心軟弱神仍用他。"
 ---
 
 # 耶和华和基甸的刀

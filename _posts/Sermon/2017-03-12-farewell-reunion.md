@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "すれ違い、また出会い"
 date: 2017-03-12
-excerpt: "farewell reunion"
+excerpt: "掃羅與大衛：神先立掃羅迎合民心，掃羅獻祭越權、留亞甲違命被厭棄；撒母耳膏大衛於伯利恆。"
 ---
 
 # すれ違い、また出会い

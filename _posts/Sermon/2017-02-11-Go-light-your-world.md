@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "Go light your world"
 date: 2017-02-11
-excerpt: "go light your world"
+excerpt: "つくば教会の賛美Go light your world：魂の光を捧げ、暗い世に進み、主の愛で祈り、世を照らす。"
 ---
 
 # Go light your world

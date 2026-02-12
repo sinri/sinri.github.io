@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "论该撒之物之追放"
 date: 2016-11-09
-excerpt: "No to King Holding"
+excerpt: "該撒的物歸給該撒：法利賽人與希律黨試探納稅；教會不干涉私產、以祈禱傳道為事，買賣審斷逐出殿。"
 ---
 
 # 论该撒之物之追放

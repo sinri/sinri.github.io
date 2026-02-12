@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "随风潜入夜"
 date: 2018-05-23
-excerpt: "as-rain-in-night"
+excerpt: "路得记：士师时代一家小事如春云时雨，拿俄米、路得与波阿斯，律法暗夜中神恩典润物细无声。"
 ---
 
 # 随风潜入夜

@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "皇国兴废"
 date: 2017-12-30
-excerpt: "The Rise and Fall of the Imperial Nation"
+excerpt: "犹大列王兴废简史：自罗波安至西底家，所罗门后国蔓延异神，敬神则兴、弃神则亡。"
 ---
 
 # 皇国兴废

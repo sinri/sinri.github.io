@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "四十年間"
 date: 2017-08-19
-excerpt: "forty years"
+excerpt: "以色列人四十年曠野：十人報惡信致一代滅亡，神用四十年淨化，次世代得進迦南，忍耐之教。"
 ---
 
 # 四十年間

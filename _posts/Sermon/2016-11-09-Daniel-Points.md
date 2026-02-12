@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "但以理书大纲"
 date: 2016-11-09
-excerpt: "Daniel Points"
+excerpt: "但以理書大綱：神遣但以理入世國、五物之像顯人世、三友火窯獅子坑、尼布甲尼撒與伯沙撒之見證。"
 ---
 
 # 但以理书大纲

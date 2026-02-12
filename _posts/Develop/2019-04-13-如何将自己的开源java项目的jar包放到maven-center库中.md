@@ -3,10 +3,10 @@ layout: post
 author: sinri
 title: "如何将自己的开源Java项目的Jar包放到Maven Center库中"
 date: 2019-04-13
-excerpt: "在开源Java项目完成可以发布之后，可能会考虑共享Jar包到Maven Center库中。"
+excerpt: "将开源Java项目Jar包发布到Maven中央库的完整操作指南，涵盖GPG准备、Sonatype注册、工单发起、Maven与POM配置、deploy命令执行及同步等待等全流程。含插件配置与Nexus操作。"
 ---
 
-# 2019.04.13 如何将自己的开源Java项目的Jar包放到Maven Center库中
+# 如何将自己的开源Java项目的Jar包放到Maven Center库中
 
 在开源Java项目完成可以发布之后，可能会考虑共享Jar包到Maven Center库中。
 如果从来没有过发布经验，可以按照这个步骤进行。

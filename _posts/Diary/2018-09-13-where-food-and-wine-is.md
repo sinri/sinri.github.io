@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "穀酒安在兮"
 date: 2018-09-13
-excerpt: "where food and wine is"
+excerpt: "对《个人生活以主为中心》一文的评论，批判文中空谈属灵而忽视现实困境，论父母教养、浪子回家与以主为中心的真义。"
 ---
 
 # 穀酒安在兮

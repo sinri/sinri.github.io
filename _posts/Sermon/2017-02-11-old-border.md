@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "昔からの地境"
 date: 2017-02-11
-excerpt: "old border"
+excerpt: "昔からの地境：信仰・団契・人生・奉仕の地境；聖書と聖霊は唯一の地境、ナボトの畑を守る覚悟。"
 ---
 
 # 昔からの地境

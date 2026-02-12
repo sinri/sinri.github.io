@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "第一次归回和第二圣殿的建立"
 date: 2018-02-10
-excerpt: "First Return"
+excerpt: "古列下诏，所罗巴伯率众归回，七年建殿，哈该撒迦利亚勉励，大利乌六年第二圣殿竣工。"
 ---
 
 # 第一次归回和第二圣殿的建立

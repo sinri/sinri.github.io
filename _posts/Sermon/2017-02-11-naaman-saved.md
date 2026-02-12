@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "ナアマンが清められる件について"
 date: 2017-02-11
-excerpt: "naaman saved"
+excerpt: "ナアマン清め：癒せと洗え、七度ヨルダンで洗う；救いは狭い道を自ら歩むこと、大変なことを代償とする覚悟。"
 ---
 
 # ナアマンが清められる件について

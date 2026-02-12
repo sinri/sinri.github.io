@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "“神的儿女”简论"
 date: 2018-07-14
-excerpt: "children of god"
+excerpt: "论神的儿女：从创造之先的拣选，到基督新妇的造就，以及永世里教会的成全。"
 ---
 
 # “神的儿女”简论

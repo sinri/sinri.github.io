@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "约沙法纪略"
 date: 2017-11-04
-excerpt: "A Brief Chronicle of Jehoshaphat"
+excerpt: "约沙法行正事、富国强兵、与亚哈结亲为污点，以赞美胜三国联军，造船不遂。"
 ---
 
 # 约沙法纪略

@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "旷野中的日常"
 date: 2016-08-07
-excerpt: "daily in desert"
+excerpt: "荒野の日常：雲とラッパの導き、ホバブ案内、ミリアムとアロン攻撃、キブロト・ハタアワのうずらとマナ。"
 ---
 
 # 荒野の日常

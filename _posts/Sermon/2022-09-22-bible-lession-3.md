@@ -3,7 +3,7 @@ layout: post
 author: sinri
 date: 2022-09-22
 title: "经训概要 第三课"
-excerpt: "bible lession 3"
+excerpt: "讲解创世记第三章：撒旦试探、亚当夏娃堕落、行为之约与恩典之约，以及救赎之约的根源。"
 ---
 
 # 经训概要 第三课

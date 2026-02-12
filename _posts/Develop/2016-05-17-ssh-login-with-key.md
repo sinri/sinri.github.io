@@ -1,9 +1,9 @@
 ---
 layout: post
 author: sinri
-title: "SSH登录时使用密钥"
+title: "RSAに基づくパスワード不要なSSHログインの配置方法"
 date: 2016-05-17
-excerpt: "SSH login with key"
+excerpt: "RSAに基づくパスワード不要なSSHログインの配置方法。クライアントでssh-keygen生成、公開鍵をサーバーのauthorized_keysに追加する手順。SSHバージョンによる注意点も記載。"
 ---
 
 # RSAに基づくパスワード不要なSSHログインの配置方法

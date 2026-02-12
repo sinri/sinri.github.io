@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "追憶參孫"
 date: 2016-12-31
-excerpt: "Samson in Memory"
+excerpt: "參孫追憶：拿細耳人勇力、女色弱點、大利拉出賣；信心得肯定卻非遵行信仰之人，自殺式襲擊得報仇。"
 ---
 
 # 追憶參孫

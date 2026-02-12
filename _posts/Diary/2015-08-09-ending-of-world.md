@@ -1,9 +1,9 @@
 ---
 layout: post
 author: sinri
-title: "A"
+title: "世の終わりだろう"
 date: 2015-08-09
-excerpt: "A"
+excerpt: "主日学校当番の後、子供の教育と家庭の責任、親の身にあり、婚姻の危機と愛の別れ、世の終わりについてつぶやく。"
 ---
 
 # 世の終わりだろう

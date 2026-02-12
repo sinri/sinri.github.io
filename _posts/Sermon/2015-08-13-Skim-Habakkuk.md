@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "Skim Habakkuk"
 date: 2015-08-13
-excerpt: "Skim Habakkuk"
+excerpt: "哈巴谷書：律法放鬆公理顛倒、神用迦勒底人審判；義人因信得生、雖無花果樹不發旺仍因耶和華歡欣。"
 ---
 
 # ハバクク書をごらん

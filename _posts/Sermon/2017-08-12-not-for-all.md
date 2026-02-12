@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "这话不是人都能领受的"
 date: 2017-08-12
-excerpt: "not for all"
+excerpt: "休妻與婚姻：神配合人不可分，惟獨賜給誰誰才能領受；摩西因心硬許休書，新約不設律法執法。"
 ---
 
 # 这话不是人都能领受的

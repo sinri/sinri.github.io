@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "旷野大清洗"
 date: 2016-08-20
-excerpt: "cleaning in desert"
+excerpt: "曠野大清洗：安息日撿柴、褻瀆聖名者、可拉黨争祭司職、呂便争權；杖發芽、瘟疫止、君權神授。"
 ---
 
 # 旷野大清洗

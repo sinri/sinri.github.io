@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "独立短言"
 date: 2017-11-11
-excerpt: "Independent Words"
+excerpt: "主日学短言：喂养小羊当教合神心意、不偏左右，将神的道传给孩子，忍耐等候秋雨春雨。"
 ---
 
 # 独立短言

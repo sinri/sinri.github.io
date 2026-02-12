@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "Bible Lesson 8"
 date: 2015-10-24
-excerpt: "Bible Lesson 8"
+excerpt: "經訓第八課：亞伯蘭後裔之約、夏甲以實瑪利、割禮立志、獻以撒；你本身所生的才為後嗣，神單方立約。"
 ---
 
 # 经训概要第八课备课

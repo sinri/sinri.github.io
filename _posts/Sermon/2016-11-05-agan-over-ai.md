@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "欲灭艾城，先灭亚干"
 date: 2016-11-05
-excerpt: "Agan over Ai"
+excerpt: "亞干私藏當滅物致艾城敗，自潔搜捕石刑滅族；約書亞初勝飄然未問主即出兵，罪有連累、悔改為本分。"
 ---
 
 # 欲灭艾城，先灭亚干

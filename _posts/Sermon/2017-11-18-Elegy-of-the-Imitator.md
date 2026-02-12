@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "模仿者的悲歌"
 date: 2017-11-18
-excerpt: "Elegy of the Imitator"
+excerpt: "约阿施与亚玛谢：模仿者之悲歌，师从耶何耶大则兴、转听众首领则亡，敬畏神非学招式。"
 ---
 
 # 模仿者的悲歌

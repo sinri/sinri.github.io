@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "所羅門年日考"
 date: 2017-07-08
-excerpt: "solomon days"
+excerpt: "所羅門年日考：登基至少十五歲，七年建殿、十三年宮室，四十年作王，羅波安五歲時聖殿開工。"
 ---
 
 # 所羅門年日考

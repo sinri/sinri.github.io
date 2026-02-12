@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "嗚呼勇士は仆たるかな戰の具は失たるかな"
 date: 2017-03-29
-excerpt: "david and jonathan"
+excerpt: "大衛與約拿單：結盟立約、刺探掃羅、西弗樹林相見；約拿單試圖調和卻無法調和，未投奔大衛。"
 ---
 
 # 嗚呼勇士は仆たるかな戰の具は失たるかな

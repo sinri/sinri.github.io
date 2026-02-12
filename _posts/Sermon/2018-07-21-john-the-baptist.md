@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "施洗约翰的出现"
 date: 2018-07-21
-excerpt: "约翰的洗礼"
+excerpt: "施洗约翰在旷野传悔改之道，预备主的路，预言基督以圣灵施洗，他是应当来的以利亚。"
 ---
 
 # 施洗约翰的出现

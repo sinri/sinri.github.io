@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "悔い改めよ。天の国は近づいた。"
 date: 2017-02-11
-excerpt: "repent for heaven"
+excerpt: "悔い改めよ、天の国は近づいた：律法による罪の解決、愛で罪を宥和せず、悔い改めこそ揺るぎない命令。"
 ---
 
 # 悔い改めよ。天の国は近づいた。

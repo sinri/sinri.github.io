@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "咸鱼一生"
 date: 2018-08-13
-excerpt: "salty fish life"
+excerpt: "以咸鱼为喻，默想其从鱼苗孵化到被捕、腌制、晒干、被吃的悲惨一生，反思世人夺命吞身是否得幸福。"
 ---
 
 # 咸鱼一生

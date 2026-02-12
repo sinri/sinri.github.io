@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "Gradle, JReleaser, and Maven Central"
 date: 2026-02-10
-excerpt: "How to publish your Gradle project to Maven Central using JReleaser"
+excerpt: "使用JReleaser将Gradle项目发布到Maven中央库的配置指南，涵盖GPG密钥、Sonatype账号、gradle.properties与build.gradle.kts的完整配置步骤。含 signing 与 JReleaser deploy 配置。"
 ---
 
 # Gradle, JReleaser, and Maven Central

@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "押沙龍稱王記"
 date: 2017-05-30
-excerpt: "absalom king"
+excerpt: "押沙龍稱王記：殺暗嫩亡命基述、約押召回、希伯倫起事、亞希多弗叛、大衛逃、戶篩臥底。"
 ---
 
 # 押沙龍稱王記

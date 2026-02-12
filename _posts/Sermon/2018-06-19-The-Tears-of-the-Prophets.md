@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "The Tears of the Prophets"
 date: 2018-06-19
-excerpt: "先知的眼泪"
+excerpt: "以诺、挪亚、约伯、以赛亚、耶利米、以西结等先知含泪盼望救赎，蒙神呼召、传神启示。"
 ---
 
 # The Tears of the Prophets

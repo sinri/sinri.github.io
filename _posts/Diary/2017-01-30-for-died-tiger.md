@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "悼亡虎文"
 date: 2017-01-30
-excerpt: "for died tiger"
+excerpt: "甬之虎因噬人而亡，悼之并论亚哈谢墜樓櫺、拿伯葡萄園等典故，伸张上主之公义与为义受逼迫者，以慰亡虎在地之魂。"
 ---
 
 # 悼亡虎文

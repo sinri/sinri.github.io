@@ -3,7 +3,7 @@ layout: post
 author: sinri
 date: 2022-09-08
 title: "经训概要 第一课"
-excerpt: "bible lession 1"
+excerpt: "讲解创世记第一章的创造记录：从起初、混沌到六日复造，以及安息的主权与意义。"
 ---
 
 # 经训概要 第一课

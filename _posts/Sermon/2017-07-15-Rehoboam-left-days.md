@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "羅波安的餘生"
 date: 2017-07-15
-excerpt: "rehoboam left days"
+excerpt: "羅波安餘生：不聽老人言致分裂，示瑪雅禁戰，示撒攻陷奪金盾換銅盾，強盛三年後第四年變壞。"
 ---
 
 # 羅波安的餘生

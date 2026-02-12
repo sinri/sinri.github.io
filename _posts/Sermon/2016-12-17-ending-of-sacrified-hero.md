@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "犠牲となる優しい英雄の結末"
 date: 2016-12-17
-excerpt: "Ending of Sacrified Hero"
+excerpt: "耶弗他：私生子被逐、許願獻女、以法蓮争功被滅；英雄為盾牌與犧牲品，背後之人不忘捅刀。"
 ---
 
 # 犠牲となる優しい英雄の結末

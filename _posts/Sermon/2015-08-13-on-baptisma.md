@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "On Baptisma"
 date: 2015-08-13
-excerpt: "On Baptisma"
+excerpt: "バプテスマ一存：浸禮表悔改覺悟非重生保障；嬰兒浸禮謬、淨會以浸為主；同釘之道無水浸亦見改悔之靈。"
 ---
 
 # バプテスマの一存

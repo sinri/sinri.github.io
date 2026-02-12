@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "耶和华的节期"
 date: 2016-07-23
-excerpt: "holy festivals"
+excerpt: "耶和華的節期：逾越節無酵節、初熟節五旬節、吹角贖罪住棚，利未記廿三章七節聖會。"
 ---
 
 # 耶和华的节期

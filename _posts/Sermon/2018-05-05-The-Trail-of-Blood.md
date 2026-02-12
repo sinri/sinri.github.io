@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "血路 – The Trail of Blood"
 date: 2018-05-05
-excerpt: "The Trail of Blood"
+excerpt: "追踪基督教会两千年的传承：从使徒立教会到黑暗时代殉道者的血路，辨析真教会的标记。"
 ---
 
 # 血路 – The Trail of Blood

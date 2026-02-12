@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "地の塩、世の光"
 date: 2017-02-11
-excerpt: "鹽と光"
+excerpt: "地の塩・世の光：岩塩の塩気、契約の象徴、光は隠されず人に見せる、クリスチャンの本質。"
 ---
 
 # 地の塩、世の光

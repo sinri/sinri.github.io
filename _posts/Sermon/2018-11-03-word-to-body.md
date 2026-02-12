@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "道成肉身"
 date: 2018-11-03
-excerpt: "word to body"
+excerpt: "从基督降生的场景与伯利恒马槽出发，思考道成肉身的意义：神降卑为人，叫万民可以就近。"
 ---
 
 # 道成肉身

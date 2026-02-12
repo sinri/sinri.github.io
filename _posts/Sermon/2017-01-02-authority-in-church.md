@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "教会中的权柄"
 date: 2017-01-02
-excerpt: "authority in church"
+excerpt: "教會權柄：監督、長老、執事之職分，聖經中七處論監督、十八處論長老，使徒為建立教會。"
 ---
 
 # 教会中的权柄

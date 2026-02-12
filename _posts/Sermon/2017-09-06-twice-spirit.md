@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "后是灵感加倍得"
 date: 2017-09-06
-excerpt: "twice spirit"
+excerpt: "以利亚与以利沙：先辈十二神迹，后辈加倍得灵感，渡河治水复活等事奉，显明神的大能。"
 ---
 
 # 后是灵感加倍得

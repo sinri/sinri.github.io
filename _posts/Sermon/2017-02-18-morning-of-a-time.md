@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "時代の夜明け"
 date: 2017-02-18
-excerpt: "morning of a time"
+excerpt: "時代的夜明け：哈拿許願獻子、以利縱容子惡、撒母耳蒙召；士師至王政的轉換，萬軍之耶和華顯明。"
 ---
 
 # 時代の夜明け

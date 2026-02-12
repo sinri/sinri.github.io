@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "以利沙中期史"
 date: 2017-09-09
-excerpt: "mid elisha"
+excerpt: "以利沙中期：三王攻摩押、油瓶还债、书念妇得子、毒瓜添面、二十饼饱百人、斧头浮起。"
 ---
 
 # 以利沙中期史

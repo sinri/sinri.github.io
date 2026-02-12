@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "七事以鉴"
 date: 2017-08-22
-excerpt: "seven things"
+excerpt: "七事以鉴：拣选上好福分、责恶亡全家、麻风归处、知心内如何、住殿求问、忘背后奔前、主来敬虔。"
 ---
 
 # 七事以鉴

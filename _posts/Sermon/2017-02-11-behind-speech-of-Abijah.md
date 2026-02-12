@@ -3,7 +3,7 @@ layout: post
 author: sinri
 title: "アビヤの演説の裏"
 date: 2017-02-11
-excerpt: "behind speech of Abijah"
+excerpt: "アビヤの演説の裏：歴代誌は勝利を記すが列王記は悪行を記す；神は人の演説で動かず、真理の戦いは愛をもって責める。"
 ---
 
 # アビヤの演説の裏

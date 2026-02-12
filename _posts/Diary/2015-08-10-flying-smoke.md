@@ -1,9 +1,9 @@
 ---
 layout: post
 author: sinri
-title: "Flying Smoke"
+title: "煙よ飛んで"
 date: 2015-08-10
-excerpt: "Flying Smoke"
+excerpt: "帰り道に橋上で煙を喫う人を見し、タバコの煙が月の光で地獄の美しさを描く様、人生の意味と神の義の裁きについて考える。"
 ---
 
 # 煙よ飛んで
