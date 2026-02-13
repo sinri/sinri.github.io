@@ -30,6 +30,6 @@ relative_links:
   enabled: true
   include: ["reels"]
   exclude: ["iOS","StrongDict"]
-permalink: /:title/
+# permalink: /:year/:month/:day/:title/
 
 # Rerun `bundle exec jekyll serve --livereload` after mofifying this file.
