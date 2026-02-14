@@ -67,6 +67,19 @@ body {
     color: rgba(255, 255, 255, 0.5);
 }
 
+div.post-title-pane{
+    border: none;
+    border-radius: 12px;
+    background-color: #f0f0f0;
+    padding: 0.75rem 1rem;
+    color: #0b2d6b;
+    font-style: italic;
+}
+
+div.post-title-pane a{
+    color: inherit;
+}
+
 /* 移动端菜单按钮 */
 .mobile-menu-toggle,
 .toc-toggle {
@@ -131,6 +144,41 @@ body {
 
 .toc-sidebar .toc-wrapper {
     position: relative;
+}
+
+/* PC 端目录完全隐藏（收起后显示浮动恢复按钮） */
+.toc-sidebar.toc-hidden {
+    display: none;
+}
+
+/* PC 端目录恢复浮动按钮 */
+.toc-restore-btn {
+    display: none;
+    position: fixed;
+    right: 1rem;
+    top: 80px;
+    bottom: auto;
+    z-index: 1100;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.toc-restore-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.22);
+}
+
+.toc-restore-btn:active {
+    transform: translateY(0);
 }
 
 /* 目录收起状态 */
@@ -536,6 +584,11 @@ body {
     .toc-collapse-btn {
         display: none;
     }
+
+    /* 移动端不显示 PC 恢复按钮 */
+    .toc-restore-btn {
+        display: none !important;
+    }
     
     /* 移动端目录标题占满整行 */
     .toc-header {
@@ -624,6 +677,7 @@ body {
 @media print {
     .site-header,
     .toc-sidebar,
+    .toc-restore-btn,
     .mobile-menu-toggle,
     .toc-toggle {
         display: none;

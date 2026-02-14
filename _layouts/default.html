@@ -46,6 +46,11 @@
             </div>
             <div class="toc-collapsed-indicator">目录</div>
         </aside>
+
+        <!-- PC 端目录恢复浮动按钮（收起后显示） -->
+        <button class="toc-restore-btn" id="tocRestoreBtn" type="button" aria-label="恢复目录" title="恢复目录">
+            目录
+        </button>
     </div>
 
     <!-- JavaScript 生成动态目录 -->
@@ -138,19 +143,30 @@
             
             // PC端目录收起/展开
             const tocCollapseBtn = document.getElementById('tocCollapseBtn');
+            const tocRestoreBtn = document.getElementById('tocRestoreBtn');
             if (tocCollapseBtn) {
                 tocCollapseBtn.addEventListener('click', function() {
-                    tocSidebar.classList.toggle('collapsed');
-                    const icon = this.querySelector('.collapse-icon');
-                    if (tocSidebar.classList.contains('collapsed')) {
-                        icon.textContent = '«';
-                        this.setAttribute('aria-label', '展开目录');
-                    } else {
-                        icon.textContent = '»';
-                        this.setAttribute('aria-label', '收起目录');
-                    }
+                    // 仅 PC 端：收起后隐藏整个目录板块，改为显示浮动恢复按钮
+                    if (window.innerWidth <= 768) return;
+                    tocSidebar.classList.add('toc-hidden');
+                    if (tocRestoreBtn) tocRestoreBtn.style.display = 'block';
                 });
             }
+
+            if (tocRestoreBtn) {
+                tocRestoreBtn.addEventListener('click', function() {
+                    tocSidebar.classList.remove('toc-hidden');
+                    this.style.display = 'none';
+                });
+            }
+
+            // 尺寸切换兜底：进入移动端时强制恢复目录，避免隐藏状态残留
+            window.addEventListener('resize', function() {
+                if (window.innerWidth <= 768) {
+                    tocSidebar.classList.remove('toc-hidden');
+                    if (tocRestoreBtn) tocRestoreBtn.style.display = 'none';
+                }
+            });
             
             // 点击外部关闭菜单
             document.addEventListener('click', function(e) {
